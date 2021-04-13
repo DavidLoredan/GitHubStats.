@@ -1,0 +1,64 @@
+.UserStatsGlobal {
+  background: url('https://cdn.discordapp.com/attachments/828909702665601046/831437536860962867/Sarcelle_Noir_Photo_Reseaux_Publicite_Site_web_Turquoise.png');
+
+  background-position: center center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .user {
+    font-size: 1.8em;
+    font-weight: 200;
+  }
+
+  #blockOne {
+    border: 2px;
+    border-color: black;
+    border-style: solid;
+    margin: 20px 0 20px 0;
+    padding: 20px;
+  }
+
+  #block {
+    border: 2px;
+    border-color: black;
+    border-style: solid;
+    margin-bottom: 20px;
+    width: 80vw;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba($color: #5ce1e6, $alpha: 0.5);
+
+    p {
+      text-align: center;
+    }
+
+    #repoList #oneLine {
+      display: flex;
+      justify-content: space-between;
+
+      .htmlCircle {
+        width: 12px;
+        height: 12px;
+        border: 1px solid;
+        border-radius: 50%;
+        background-color: #e34c26;
+        margin-left: 5px;
+      }
+      .langageUse {
+        display: flex;
+        padding-left: 0;
+      }
+    }
+  }
+  .profilBlock {
+    color: black;
+    display: flex;
+    justify-content: center;
+
+    img {
+      height: 70px;
+      margin-right: 20px;
+    }
+  }
+}
