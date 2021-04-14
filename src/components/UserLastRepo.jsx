@@ -4,27 +4,27 @@ import './UserLastRepo.scss';
 function UserLastRepo() {
   return (
     <div>
-      <section className="lastRepoBlock" id="block">
+      <section className="UserLastRepo">
         <p>Last Repo</p>
-        <div id="repoList">
+        <div className="repoList">
           <ul>
-            <li id="oneLine">
+            <li className="oneLine">
               <span>Repository</span>
               <span>Techno used</span>
             </li>
-            <li id="oneLine">
+            <li className="oneLine">
               <span>Repository</span>
               <span>Techno used</span>
             </li>
-            <li id="oneLine">
+            <li className="oneLine">
               <span>Repository</span>
               <span>Techno used</span>
             </li>
-            <li id="oneLine">
+            <li className="oneLine">
               <span>Repository</span>
               <span>Techno used</span>
             </li>
-            <li id="oneLine">
+            <li className="oneLine">
               <span>Repository</span>
               <span>Techno used</span>
             </li>

@@ -9,9 +9,10 @@
   .user {
     font-size: 1.8em;
     font-weight: 200;
+    text-align: center;
   }
 
-  #blockOne {
+  .UserInfo {
     border: 2px;
     border-color: black;
     border-style: solid;
@@ -19,7 +20,8 @@
     padding: 20px;
   }
 
-  #block {
+  .UserStartRepo,
+  .UserLastRepo {
     border: 2px;
     border-color: black;
     border-style: solid;
@@ -33,7 +35,7 @@
       text-align: center;
     }
 
-    #repoList #oneLine {
+    .repoList .oneLine {
       display: flex;
       justify-content: space-between;
 
@@ -51,7 +53,7 @@
       }
     }
   }
-  .profilBlock {
+  .UserInfo {
     color: black;
     display: flex;
     justify-content: center;

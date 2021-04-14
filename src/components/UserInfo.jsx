@@ -5,7 +5,7 @@ function UserInfo() {
   return (
     <div>
       <p className="user">John Doe</p>
-      <section className="profilBlock" id="blockOne">
+      <section className="UserInfo">
         <img
           src="https://avatars.githubusercontent.com/u/47313528?v=4"
           alt="User avatar"
