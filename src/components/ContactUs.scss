@@ -1,0 +1,48 @@
+.Contact {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.ContactUs {
+  width: 100vw;
+  display: flex;
+  background-image: url(https://www.webratio.com/website/new-homepage/wr-site-contact-us-image-header.jpg);
+  justify-content: space-between;
+}
+
+.form {
+  margin-left: 10rem;
+  padding-top: 1rem;
+  font-size: 1.2rem;
+}
+
+.form p {
+  color: white;
+}
+
+.form p button {
+  margin-top: 0.5rem;
+}
+
+.form input {
+  margin-top: 0.5rem;
+  color: white;
+}
+
+.address {
+  margin-right: 10rem;
+  color: white;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.address a {
+  text-decoration: none;
+  color: white;
+  padding-top: 1rem;
+}
+
+.address p {
+  padding-top: 1rem;
+}
