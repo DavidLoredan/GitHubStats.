@@ -1,6 +1,7 @@
 import Events from './Events';
 import Screenshots from './Screenshots';
 import Description from './Description';
+import ContactUs from './ContactUs';
 import './scss/Home.scss';
 
 function Home() {
@@ -9,6 +10,7 @@ function Home() {
       <Description />
       <Screenshots />
       <Events />
+      <ContactUs />
     </div>
   );
 }
