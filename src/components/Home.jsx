@@ -1,4 +1,15 @@
+import Events from './Events';
+import Screenshots from './Screenshots';
+import Description from './Description';
+import './scss/Home.scss';
+
 function Home() {
-  return <div>Ici on code la page acceuil</div>;
+  return (
+    <div className="container">
+      <Description />
+      <Screenshots />
+      <Events />
+    </div>
+  );
 }
 export default Home;
