@@ -1,41 +1,37 @@
-import '../reset.css';
-import './UserStartRepo.scss';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
-function UserStartRepo() {
+import './UserStarsRepo.scss';
+
+function UserStarsRepo() {
+  const [repoList, setrepoList] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get('https://api.github.com/users/loicbrassart/starred')
+      .then(({ data }) => {
+        setrepoList(data);
+      });
+  }, []);
+
   return (
     <div>
-      <section className="UserStartRepo">
-        <p>Stars&apos;s Repo</p>
-        <div className="repoList">
-          <ul>
-            <li className="oneLine">
-              <span>Name of first repo stars</span>
-              <div className="langageUse">
-                <p>HTML</p>
-                <div className="htmlCircle"> </div>
-              </div>
-            </li>
-            <li className="oneLine">
-              <span>Name of second repo stars</span>
-              <span>Techno used</span>
-            </li>
-            <li className="oneLine">
-              <span>Name of third repo stars</span>
-              <span>Techno used</span>
-            </li>
-            <li className="oneLine">
-              <span>Name of fourth repo stars</span>
-              <span>Techno used</span>
-            </li>
-            <li className="oneLine">
-              <span>Name of fifth repo stars</span>
-              <span>Techno used</span>
-            </li>
-          </ul>
+      <p>Stars&apos;s Repo</p>
+      <section className="UserStarsRepo">
+        <div className="cardeList">
+          {repoList.slice(0, 5).map((repo) => {
+            return (
+              <ul className="carde">
+                <li className="repoName">{repo.name}</li>
+                <li className="repoDesc">{repo.description}</li>
+                <li className="repoLanguage">{repo.language}</li>
+              </ul>
+            );
+          })}
         </div>
       </section>
     </div>
   );
 }
 
-export default UserStartRepo;
+export default UserStarsRepo;
