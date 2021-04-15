@@ -1,4 +1,3 @@
-import '../reset.css';
 import './ContactUs.scss';
 
 function ContactUs() {
@@ -23,7 +22,9 @@ function ContactUs() {
           <p>GitStats</p>
           <p>4 avenue des Saules, 59000 Lille</p>
           <br />
-          <a href="https://google.com">p2g3WCS@gmail.com</a>
+          <a href="https://mail.google.com/mail/u/2/?ogbl#inbox">
+            p2g3.github@gmail.com
+          </a>
           <p>Tél: 01 02 03 04 05</p>
         </div>
       </div>
