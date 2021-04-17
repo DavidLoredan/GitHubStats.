@@ -11,7 +11,6 @@ function Footer() {
             <img
               src="https://freepikpsd.com/wp-content/uploads/2019/10/adresse-icone-png-6-Transparent-Images.png"
               alt="adresse"
-              width="25px"
             />
             <p>4 Avenue des Saules - Bâtiment le Doge - 59160 LILLE</p>
           </div>
@@ -19,7 +18,6 @@ function Footer() {
             <img
               src="https://e7.pngegg.com/pngimages/519/73/png-clipart-email-computer-icons-symbol-logo-prototype-miscellaneous-text.png"
               alt="mail"
-              width="25px"
             />
             <p>p2g3.github@gmail.com</p>
           </div>
@@ -27,7 +25,6 @@ function Footer() {
             <img
               src="https://img.icons8.com/metro/452/cell-phone.png"
               alt="phone"
-              width="25px"
             />
             <p>01 23 45 67 89</p>
           </div>
