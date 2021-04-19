@@ -7,27 +7,41 @@ function UserStarsRepo() {
   const [repoList, setrepoList] = useState([]);
 
   useEffect(() => {
-    axios
-      .get('https://api.github.com/users/loicbrassart/starred')
-      .then(({ data }) => {
-        setrepoList(data);
-      });
+    axios.get('https://api.github.com/users/bob/starred').then(({ data }) => {
+      setrepoList(data);
+    });
   }, []);
 
   return (
     <div>
-      <p>Stars&apos;s Repo</p>
       <section className="UserStarsRepo">
+        <p>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/%C3%89toile_d%27or.svg/1200px-%C3%89toile_d%27or.svg.png"
+            alt=""
+          />
+          Stars&apos;s Repo
+        </p>
         <div className="cardeList">
-          {repoList.slice(0, 5).map((repo) => {
-            return (
-              <ul className="carde">
-                <li className="repoName">{repo.name}</li>
-                <li className="repoDesc">{repo.description}</li>
-                <li className="repoLanguage">{repo.language}</li>
-              </ul>
-            );
-          })}
+          {repoList
+            .sort(function (x, y) {
+              // Here, we sort the array by size project
+              return x.size - y.size;
+            })
+            .slice(0, 5) // Here, we take the first five elements
+            .map((repo) => {
+              return (
+                <ul className="carde">
+                  <div className="repoInfo">
+                    <li className="repoName">{repo.name}</li>
+                    <li className="repoDesc">{repo.description}</li>
+                  </div>
+                  <div className="repoTechno">
+                    <li className={repo.language}>{repo.language}</li>
+                  </div>
+                </ul>
+              );
+            })}
         </div>
       </section>
     </div>
