@@ -7,7 +7,7 @@ function Header() {
 
   const handleQueryChange = () => {
     const history = useHistory();
-    history.push(`/userStats/${query}`);
+    history.push(`/userStats/user`);
   };
 
   return (
