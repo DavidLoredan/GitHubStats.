@@ -1,22 +1,48 @@
+import React from 'react';
 import './ContactUs.scss';
 
 function ContactUs() {
   return (
     <div>
-      <h2 className="Contact">CONTACT US</h2>
       <div className="ContactUs">
-        <form className="form">
-          <p>Name:</p>
-          <input type="text" placeholder="Name" />
-          <p>Email:</p>
-          <input type="text" placeholder="Your email" />
-          <p>Telephone:</p>
-          <input type="number" placeholder="Phone number" />
-          <p>Your message:</p>
-          <textarea type="text" placeholder="Your message here" />
-          <p>
-            <button type="submit">SEND</button>
+        <form id="contact-form" method="POST" className="form">
+          <p className="form">How do we know you?</p>
+          <label htmlFor="name" className="form">
+            <input type="text" id="name" placeholder="Your name here" />
+          </label>
+          <p className="form">
+            Tell us the reason why do you want to contact us?
           </p>
+          <label htmlFor="name" type="text" className="form">
+            <select className="select" id="option">
+              <option>Choose one of these reassons below</option>
+              <option>The page is late responding</option>
+              <option>Our results are not satisfied</option>
+              <option>You can not find what you want</option>
+              <option>Your experience is not available</option>
+              <option>Other</option>
+            </select>
+          </label>
+          <p className="form">How we can contact with you?</p>
+          <label htmlFor="email" className="form">
+            <input type="text" id="email" placeholder="Your email here" />
+          </label>
+          <p className="form">Would you like us to contact you?</p>
+          <label htmlFor="phone" className="form">
+            <input type="number" id="phone" placeholder="Your phone number" />
+          </label>
+          <p className="form textArea">How do we get better?</p>
+          <label htmlFor="message" className="form">
+            <textarea id="message" placeholder="Your message here">
+              :)
+            </textarea>
+          </label>
+          <br />
+          <a href="http://www.google.com">
+            <button type="submit" className="form-but">
+              SEND YOUR MESSAGE TO US
+            </button>
+          </a>
         </form>
         <div className="address">
           <p>GitStats</p>

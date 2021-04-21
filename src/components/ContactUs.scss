@@ -1,19 +1,39 @@
-.Contact {
-  text-align: center;
-  font-size: 1.5rem;
-}
-
 .ContactUs {
-  width: 100vw;
+  height: 80vh;
   display: flex;
   background-image: url(https://www.webratio.com/website/new-homepage/wr-site-contact-us-image-header.jpg);
   justify-content: space-between;
 }
 
+.select {
+  margin-top: 0.5rem;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.textArea {
+  margin-bottom: 0.5rem;
+}
+
 .form {
   margin-left: 10rem;
   padding-top: 1rem;
-  font-size: 1.2rem;
+  font: inherit;
+}
+#name, #email, #option, #phone, #message {
+  width: 100%;
+  height: 2rem;
+}
+
+#message {
+  height: 10rem;
+}
+
+.form-but {
+  margin-left: 10rem;
+  margin-top: 1rem;
+  margin-bottom: 5rem;
+  height: 2rem;
+  font-weight: 700;
 }
 
 .form p {
@@ -26,15 +46,15 @@
 
 .form input {
   margin-top: 0.5rem;
-  color: white;
 }
 
 .address {
+  margin-top: 25vh;
   margin-right: 10rem;
   color: white;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 .address a {
