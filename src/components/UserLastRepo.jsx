@@ -1,5 +1,4 @@
 import '../reset.css';
-import './UserLastRepo.scss';
 
 function UserLastRepo() {
   return (

@@ -2,14 +2,14 @@ import '../reset.css';
 import './UserStats.scss';
 import UserInfo from './UserInfo';
 import UserStarsRepo from './UserStarsRepo';
-import UserLastRepo from './UserLastRepo';
+import UserRepoDate from './UserRepoDate';
 
 function UserStats() {
   return (
     <div className="UserStats">
       <UserInfo />
       <UserStarsRepo />
-      <UserLastRepo />
+      <UserRepoDate />
     </div>
   );
 }
