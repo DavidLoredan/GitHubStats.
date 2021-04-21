@@ -14,8 +14,8 @@ function UserRepo() {
   return (
     <div>
       <p>Liste des repos (nom-description-techno)</p>
-      <section className='UserStarsRepo'>
-        <div className='cardeList'>
+      <section className="UserStarsRepo">
+        <div className="cardeList">
           {repolist
             .sort(function compare(a, b) {
               return b.size - a.size;
@@ -24,9 +24,13 @@ function UserRepo() {
             .map((repo) => {
               return (
                 <ul className="carde">
-                  <li className="repoName">{repo.name}</li>
-                  <li className="repoDesc">{repo.description}</li>
-                  <li className="repoLanguage">{repo.language}</li>
+                  <div className="repoInfo">
+                    <li className="repoName">{repo.name}</li>
+                    <li className="repoDesc">{repo.description}</li>
+                  </div>
+                  <div className="repoTechno">
+                    <li className={repo.language}>{repo.language}</li>
+                  </div>
                 </ul>
               );
             })}
