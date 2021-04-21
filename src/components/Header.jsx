@@ -4,24 +4,13 @@ import { useHistory } from 'react-router-dom';
 
 function Header() {
   const [query, setQuery] = useState('');
-
+  const history = useHistory();
   const handleQueryChange = () => {
-    const history = useHistory();
-    history.push(`/userStats/user`);
+    history.push(`/user/${query}`);
   };
 
   return (
-    <div className="loHeader">
-      <input
-        type="text"
-        className="searchBar"
-        value={query}
-        placeholder="Enter a login Github..."
-        onChange={(e) => setQuery(e.target.value)}
-      />
-      <button className="button" type="button" onClick={handleQueryChange}>
-        search
-      </button>
+    <div className="Header">
       <div>
         <img
           className="loLogo"
@@ -37,6 +26,18 @@ function Header() {
           <h2>Developper Space</h2>
         </div>
       </section>
+      <div className="search">
+        <input
+          type="text"
+          className="searchBar"
+          value={query}
+          placeholder="Enter a login Github..."
+          onChange={(e) => setQuery(e.target.value)}
+        />
+        <button className="button" type="button" onClick={handleQueryChange}>
+          search
+        </button>
+      </div>
     </div>
   );
 }
