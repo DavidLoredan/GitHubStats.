@@ -6,7 +6,7 @@ import Footer from './components/Footer';
 
 import './reset.css';
 import './app.scss';
-import ContactUs from './components/ContactUs';
+
 import UserStats from './components/UserStats';
 
 function App() {
@@ -19,11 +19,7 @@ function App() {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route path="/toto/1" component={UserStats} />
-
-          <Route path="/contactus">
-            <ContactUs />
-          </Route>
+          <Route path="/user/:login" component={UserStats} />
         </Switch>
 
         <Footer />
