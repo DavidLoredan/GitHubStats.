@@ -1,41 +1,50 @@
-import '../reset.css';
-import './UserStartRepo.scss';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import './scss/UserStatsStyle.scss';
 
-function UserStartRepo() {
+function UserStarsRepo() {
+  const [repoList, setrepoList] = useState([]);
+
+  useEffect(() => {
+    axios.get('https://api.github.com/users/bob/starred').then(({ data }) => {
+      setrepoList(data);
+    });
+  }, []);
+
   return (
     <div>
-      <section className="UserStartRepo">
-        <p>Stars&apos;s Repo</p>
-        <div className="repoList">
-          <ul>
-            <li className="oneLine">
-              <span>Name of first repo stars</span>
-              <div className="langageUse">
-                <p>HTML</p>
-                <div className="htmlCircle"> </div>
-              </div>
-            </li>
-            <li className="oneLine">
-              <span>Name of second repo stars</span>
-              <span>Techno used</span>
-            </li>
-            <li className="oneLine">
-              <span>Name of third repo stars</span>
-              <span>Techno used</span>
-            </li>
-            <li className="oneLine">
-              <span>Name of fourth repo stars</span>
-              <span>Techno used</span>
-            </li>
-            <li className="oneLine">
-              <span>Name of fifth repo stars</span>
-              <span>Techno used</span>
-            </li>
-          </ul>
+      <section className="UserStarsRepo">
+        <p>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/%C3%89toile_d%27or.svg/1200px-%C3%89toile_d%27or.svg.png"
+            alt=""
+          />
+          Stars&apos;s Repo
+        </p>
+        <div className="cardeList">
+          {repoList
+            .sort(function (x, y) {
+              // Here, we sort the array by size project
+              return x.size - y.size;
+            })
+            .slice(0, 5) // Here, we take the first five elements
+            .map((repo) => {
+              return (
+                <ul className="carde">
+                  <div className="repoInfo">
+                    <li className="repoName">{repo.name}</li>
+                    <li className="repoDesc">{repo.description}</li>
+                  </div>
+                  <div className="repoTechno">
+                    <li className={repo.language}>{repo.language}</li>
+                  </div>
+                </ul>
+              );
+            })}
         </div>
       </section>
     </div>
   );
 }
 
-export default UserStartRepo;
+export default UserStarsRepo;
