@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import './UserStarsRepo.scss';
 
 function UserRepo() {
   const [repolist, setRepolist] = useState([]);
@@ -13,8 +14,8 @@ function UserRepo() {
   return (
     <div>
       <p>Liste des repos (nom-description-techno)</p>
-      <section className='UserRepo'>
-        <div className='cardList'>
+      <section className='UserStarsRepo'>
+        <div className='cardeList'>
           {repolist
             .sort(function compare(a, b) {
               return b.size - a.size;
@@ -22,10 +23,10 @@ function UserRepo() {
             .slice(0, 5)
             .map((repo) => {
               return (
-                <ul>
-                  <li>{repo.name}</li>
-                  <li>{repo.description}</li>
-                  <li>{repo.language}</li>
+                <ul className="carde">
+                  <li className="repoName">{repo.name}</li>
+                  <li className="repoDesc">{repo.description}</li>
+                  <li className="repoLanguage">{repo.language}</li>
                 </ul>
               );
             })}
