@@ -1,8 +1,27 @@
+import { useState } from 'react';
 import './scss/Header.scss';
+import { useHistory } from 'react-router-dom';
 
 function Header() {
+  const [query, setQuery] = useState('');
+
+  const handleQueryChange = () => {
+    const history = useHistory();
+    history.push(`/userStats/${query}`);
+  };
+
   return (
     <div className="loHeader">
+      <input
+        type="text"
+        className="searchBar"
+        value={query}
+        placeholder="Enter a login Github..."
+        onChange={(e) => setQuery(e.target.value)}
+      />
+      <button className="button" type="button" onClick={handleQueryChange}>
+        search
+      </button>
       <div>
         <img
           className="loLogo"

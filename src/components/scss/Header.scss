@@ -2,7 +2,6 @@
   display: flex;
   background-image: url('https://cdn.hipwallpaper.com/i/56/18/D7hxtw.jpg');
   height: 50vh;
-  width: 100vw;
 }
 .loBlocColor {
   display: flex;
@@ -25,4 +24,13 @@
   width: 100px;
   height: 80px;
   margin-left: 5vw;
+}
+.searchBar {
+  width: 20%;
+  height: 45px;
+  position: absolute;
+  right: 20vw;
+  top: 30vh;
+  border-radius: 10px;
+  font-size: large;
 }
