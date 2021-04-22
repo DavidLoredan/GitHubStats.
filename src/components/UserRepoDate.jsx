@@ -17,7 +17,7 @@ function UserRepoDate() {
       <section className="UserStarsRepo">
         <div className="cardeList">
           {repolist
-            .sort(function (a, b) {
+            .sort(function compare(a, b) {
               return Date.parse(b.created_at) - Date.parse(a.created_at);
             })
             .slice(0, 5)
@@ -26,7 +26,13 @@ function UserRepoDate() {
                 <ul className="carde">
                   <div className="repoInfo">
                     <li className="repoName">{repo.name}</li>
-                    <li className="repoDesc">{repo.created_at}</li>
+                    <li className="repoDesc">
+                      {repo.created_at
+                        .substring(0, 10)
+                        .split('-')
+                        .reverse()
+                        .join('-')}
+                    </li>
                   </div>
                   <div className="repoTechno">
                     <li className={repo.language}>{repo.language}</li>
