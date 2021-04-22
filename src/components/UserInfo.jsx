@@ -1,28 +1,27 @@
 import '../reset.css';
 import './UserInfo.scss';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
 function UserInfo() {
+  const [users, setUsers] = useState([]);
+  useEffect(() => {
+    axios.get(`https://api.github.com/users/bdtkevin`).then(({ data }) => {
+      setUsers(data);
+    });
+  }, []);
   return (
-    <div>
-      <p className="user">John Doe</p>
-      <section className="UserInfo">
-        <img
-          src="https://avatars.githubusercontent.com/u/47313528?v=4"
-          alt="User avatar"
-        />
-        <ul className="userInfo">
-          <li>
-            <span className="followers">42</span> followers
-          </li>
-          <li>
-            <span className="following">4</span> following
-          </li>
-          <li>
-            <span className="numberOfRepository">413</span> repository
-          </li>
-          <li>john.do@contact.io</li>
-        </ul>
-      </section>
+    <div className="UserInfo">
+      <img className="userAvatar" srcSet={users.avatar_url} alt="Avatar" />
+      <></>
+      <div className="userDetail">
+        <h1 className="userName">{users.name} </h1>
+        <p>{users.company} </p>
+        <p>{users.followers} </p>
+        <p>{users.following} </p>
+        <p>{users.email} </p>
+        <p>{users.hireable} </p>
+      </div>
     </div>
   );
 }
