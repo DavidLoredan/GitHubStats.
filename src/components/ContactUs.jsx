@@ -1,4 +1,3 @@
-import React from 'react';
 import './ContactUs.scss';
 
 function ContactUs() {
@@ -38,7 +37,7 @@ function ContactUs() {
             </textarea>
           </label>
           <br />
-          <a href="http://www.google.com">
+          <a href="/">
             <button type="submit" className="form-but">
               SEND YOUR MESSAGE TO US
             </button>
