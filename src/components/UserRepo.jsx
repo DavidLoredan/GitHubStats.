@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import './scss/UserStatsStyle.scss';
 
-function UserRepoDate() {
+function UserRepo() {
   const [repolist, setRepolist] = useState([]);
 
   useEffect(() => {
@@ -14,11 +14,11 @@ function UserRepoDate() {
   return (
     <div>
       <section className="UserStarsRepo">
-        <p>Liste des 5 repos les plus récents(nom-date-de création-langage)</p>
+        <p>Liste des repos (nom-description-techno)</p>
         <div className="cardeList">
           {repolist
             .sort(function compare(a, b) {
-              return Date.parse(b.created_at) - Date.parse(a.created_at);
+              return b.size - a.size;
             })
             .slice(0, 5)
             .map((repo) => {
@@ -26,7 +26,7 @@ function UserRepoDate() {
                 <ul className="carde">
                   <div className="repoInfo">
                     <li className="repoName">{repo.name}</li>
-                    <li className="repoDesc">{repo.created_at}</li>
+                    <li className="repoDesc">{repo.description}</li>
                   </div>
                   <div className="repoTechno">
                     <li className={repo.language}>{repo.language}</li>
@@ -39,4 +39,4 @@ function UserRepoDate() {
     </div>
   );
 }
-export default UserRepoDate;
+export default UserRepo;

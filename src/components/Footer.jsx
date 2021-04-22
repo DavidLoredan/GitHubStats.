@@ -1,4 +1,6 @@
 import React from 'react';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
+
 import './Footer.scss';
 
 function Footer() {
@@ -6,7 +8,11 @@ function Footer() {
     <>
       <div className="contact">
         <div className="bloc">
-          <h1>CONTACT US</h1>
+          <Router>
+            <Link to="/contact_us">
+              <h1>CONTACT US</h1>
+            </Link>
+          </Router>
           <div className="logo">
             <img
               src="https://freepikpsd.com/wp-content/uploads/2019/10/adresse-icone-png-6-Transparent-Images.png"

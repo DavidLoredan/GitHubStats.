@@ -1,7 +1,9 @@
+import React from 'react';
 import '../reset.css';
 import './UserStats.scss';
 import UserInfo from './UserInfo';
 import UserStarsRepo from './UserStarsRepo';
+import UserRepo from './UserRepo';
 import UserRepoDate from './UserRepoDate';
 
 function UserStats() {
@@ -9,6 +11,7 @@ function UserStats() {
     <div className="UserStats">
       <UserInfo />
       <UserStarsRepo />
+      <UserRepo />
       <UserRepoDate />
     </div>
   );

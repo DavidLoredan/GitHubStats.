@@ -1,7 +1,7 @@
-import Events from './Events';
-import Screenshots from './Screenshots';
+import React from 'react';
 import Description from './Description';
-import ContactUs from './ContactUs';
+import Screenshots from './Screenshots';
+import Events from './Events';
 import './scss/Home.scss';
 
 function Home() {
@@ -10,7 +10,6 @@ function Home() {
       <Description />
       <Screenshots />
       <Events />
-      <ContactUs />
     </div>
   );
 }

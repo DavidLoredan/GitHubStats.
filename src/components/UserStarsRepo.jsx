@@ -4,9 +4,8 @@ import './scss/UserStatsStyle.scss';
 
 function UserStarsRepo() {
   const [repoList, setrepoList] = useState([]);
-
   useEffect(() => {
-    axios.get('https://api.github.com/users/bob/starred').then(({ data }) => {
+    axios.get(`https://api.github.com/users/bob/starred`).then(({ data }) => {
       setrepoList(data);
     });
   }, []);
@@ -25,7 +24,7 @@ function UserStarsRepo() {
           {repoList
             .sort(function (x, y) {
               // Here, we sort the array by size project
-              return x.size - y.size;
+              return y.size - x.size;
             })
             .slice(0, 5) // Here, we take the first five elements
             .map((repo) => {
