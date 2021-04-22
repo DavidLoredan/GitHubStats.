@@ -20,7 +20,6 @@
     padding: 20px;
   }
 
-  .UserStartRepo,
   .UserLastRepo {
     border: 2px;
     border-color: black;
@@ -38,19 +37,6 @@
     .repoList .oneLine {
       display: flex;
       justify-content: space-between;
-
-      .htmlCircle {
-        width: 12px;
-        height: 12px;
-        border: 1px solid;
-        border-radius: 50%;
-        background-color: #e34c26;
-        margin-left: 5px;
-      }
-      .langageUse {
-        display: flex;
-        padding-left: 0;
-      }
     }
   }
   .UserInfo {
