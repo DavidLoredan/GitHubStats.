@@ -1,19 +1,20 @@
-.Screenshots{
-  font-family: 'Times New Roman', Times, serif;  
+.Screenshots {
+  font-family: 'Times New Roman', Times, serif;
   font-size: 18px;
   background-size: cover;
   height: 100%;
-  img{
+  img {
     position: relative;
     bottom: 40px;
     margin-left: 3%;
     width: 45%;
     box-shadow: 5px 5px 5px rgb(95, 92, 92);
+    border-radius: 45px 10px;
   }
- .API{
-    margin:0 40px;
+  .API {
+    margin: 0 40px;
   }
-  .titleAPI{
+  .titleAPI {
     padding: 30px;
     text-align: center;
     font-size: 2.6em;
@@ -21,11 +22,11 @@
     height: 12vh;
     background-color: grey;
     color: rgb(0, 217, 255);
+    border-radius: 45px 10px;
   }
-  @media (max-width:700px) {
-    .titleAPI{
-    font-size: small;
-    
+  @media (max-width: 700px) {
+    .titleAPI {
+      font-size: small;
     }
   }
 }

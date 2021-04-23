@@ -1,28 +1,30 @@
 import '../reset.css';
-import './UserInfo.scss';
+import './scss/UserInfo.scss';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import { useParams } from 'react-router-dom';
 
 function UserInfo() {
+  const [user, setUser] = useState([]);
+  const { login } = useParams();
+  useEffect(() => {
+    axios.get(`https://api.github.com/users/${login}`).then(({ data }) => {
+      setUser(data);
+    });
+  }, [login]);
   return (
-    <div>
-      <p className="user">John Doe</p>
-      <section className="UserInfo">
-        <img
-          src="https://avatars.githubusercontent.com/u/47313528?v=4"
-          alt="User avatar"
-        />
-        <ul className="userInfo">
-          <li>
-            <span className="followers">42</span> followers
-          </li>
-          <li>
-            <span className="following">4</span> following
-          </li>
-          <li>
-            <span className="numberOfRepository">413</span> repository
-          </li>
-          <li>john.do@contact.io</li>
-        </ul>
-      </section>
+    <div className="UserInfo">
+      <img className="userAvatar" srcSet={user.avatar_url} alt="Avatar" />
+
+      <div className="userDetail">
+        <h1 className="userName">{user.login} </h1>
+        <p>{user.company} </p>
+        <p>followers: {user.followers} </p>
+        <p>following: {user.following} </p>
+        <p>{user.email} </p>
+        <p>{user.hireable} </p>
+        <p>Created at: {user.created_at} </p>
+      </div>
     </div>
   );
 }

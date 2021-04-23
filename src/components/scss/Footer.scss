@@ -4,6 +4,7 @@
   background-size: cover;
   height: 15vh;
   font-size: 1vw;
+  border-radius: 45px 10px;
 }
 
 .bloc {
@@ -15,6 +16,8 @@
 
 .bloc h1 {
   text-align: center;
+  text-decoration: none;
+  color: #000;
   font-weight: bold;
   font-size: 2vw;
   padding-top: 0.4vh;

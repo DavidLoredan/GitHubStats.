@@ -1,7 +1,7 @@
 .Header {
   display: flex;
   background-image: url('https://cdn.hipwallpaper.com/i/56/18/D7hxtw.jpg');
-  height: 35vh;
+  height: 30vh;
   -webkit-box-shadow: -1px 12px 3px -3px rgba(255, 255, 255, 0.479);
   box-shadow: -1px 12px 3px -3px rgba(122, 122, 122, 0.6);
 
@@ -19,7 +19,7 @@
 
   .loTitle {
     font-size: 3.5em;
-    margin-top: 13vh;
+    margin-top: 10vh;
     font-weight: 900;
   }
 
@@ -41,6 +41,7 @@
     border-radius: 10px;
     font-size: large;
     padding: 10px;
+    width: 20vw;
   }
 
   button {
@@ -56,6 +57,11 @@
 
     .loTitle {
       font-size: 2.5em;
+      margin-top: 20%;
+    }
+
+    .searchBar {
+      font-size: smaller;
     }
 
     .search {

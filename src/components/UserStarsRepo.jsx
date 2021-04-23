@@ -1,14 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './scss/UserStatsStyle.scss';
+import { useParams } from 'react-router-dom';
 
 function UserStarsRepo() {
   const [repoList, setrepoList] = useState([]);
+  const { login } = useParams();
   useEffect(() => {
-    axios.get(`https://api.github.com/users/bob/starred`).then(({ data }) => {
-      setrepoList(data);
-    });
-  }, []);
+    axios
+      .get(`https://api.github.com/users/${login}/starred`)
+      .then(({ data }) => {
+        setrepoList(data);
+      });
+  }, [login]);
 
   return (
     <div>
@@ -18,11 +22,11 @@ function UserStarsRepo() {
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/%C3%89toile_d%27or.svg/1200px-%C3%89toile_d%27or.svg.png"
             alt=""
           />
-          Stars&apos;s Repo
+          Starred repos
         </p>
         <div className="cardeList">
           {repoList
-            .sort(function (x, y) {
+            .sort(function compare(x, y) {
               // Here, we sort the array by size project
               return y.size - x.size;
             })

@@ -1,20 +1,23 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import './scss/UserStatsStyle.scss';
+import { useParams } from 'react-router-dom';
 
 function UserRepo() {
   const [repolist, setRepolist] = useState([]);
-
+  const { login } = useParams();
   useEffect(() => {
-    axios.get('https://api.github.com/users/erriep/repos').then(({ data }) => {
-      setRepolist(data);
-    });
-  }, []);
+    axios
+      .get(`https://api.github.com/users/${login}/repos`)
+      .then(({ data }) => {
+        setRepolist(data);
+      });
+  }, [login]);
 
   return (
     <div>
       <section className="UserStarsRepo">
-        <p>Liste des repos (nom-description-techno)</p>
+        <p>The five biggest repos</p>
         <div className="cardeList">
           {repolist
             .sort(function compare(a, b) {

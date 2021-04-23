@@ -1,20 +1,23 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import './scss/UserStatsStyle.scss';
+import { useParams } from 'react-router-dom';
 
 function UserRepoDate() {
   const [repolist, setRepolist] = useState([]);
-
+  const { login } = useParams();
   useEffect(() => {
-    axios.get('https://api.github.com/users/erriep/repos').then(({ data }) => {
-      setRepolist(data);
-    });
-  }, []);
+    axios
+      .get(`https://api.github.com/users/${login}/repos`)
+      .then(({ data }) => {
+        setRepolist(data);
+      });
+  }, [login]);
 
   return (
     <div>
       <section className="UserStarsRepo">
-        <p>Liste des 5 repos les plus récents(nom-date-de création-langage)</p>
+        <p>The five most recently created repos</p>
         <div className="cardeList">
           {repolist
             .sort(function compare(a, b) {

@@ -1,5 +1,5 @@
 import React from 'react';
-import './ContactUs.scss';
+import './scss/ContactUs.scss';
 
 function ContactUs() {
   return (

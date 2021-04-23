@@ -1,18 +1,17 @@
 import React from 'react';
-import { BrowserRouter as Router, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-import './Footer.scss';
+import './scss/Footer.scss';
 
 function Footer() {
   return (
     <>
       <div className="contact">
         <div className="bloc">
-          <Router>
-            <Link to="/contact_us">
-              <h1>CONTACT US</h1>
-            </Link>
-          </Router>
+          <Link to="/contact_us">
+            <h1>CONTACT US</h1>
+          </Link>
+
           <div className="logo">
             <img
               src="https://freepikpsd.com/wp-content/uploads/2019/10/adresse-icone-png-6-Transparent-Images.png"
