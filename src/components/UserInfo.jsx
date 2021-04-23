@@ -2,25 +2,28 @@ import '../reset.css';
 import './UserInfo.scss';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { useParams } from 'react-router-dom';
 
 function UserInfo() {
-  const [users, setUsers] = useState([]);
+  const [user, setUser] = useState([]);
+  const { login } = useParams();
   useEffect(() => {
-    axios.get(`https://api.github.com/users/bdtkevin`).then(({ data }) => {
-      setUsers(data);
+    axios.get(`https://api.github.com/users/${login}`).then(({ data }) => {
+      setUser(data);
     });
-  }, []);
+  }, [login]);
   return (
     <div className="UserInfo">
-      <img className="userAvatar" srcSet={users.avatar_url} alt="Avatar" />
-      <></>
+      <img className="userAvatar" srcSet={user.avatar_url} alt="Avatar" />
+
       <div className="userDetail">
-        <h1 className="userName">{users.name} </h1>
-        <p>{users.company} </p>
-        <p>{users.followers} </p>
-        <p>{users.following} </p>
-        <p>{users.email} </p>
-        <p>{users.hireable} </p>
+        <h1 className="userName">{user.login} </h1>
+        <p>{user.company} </p>
+        <p>followers: {user.followers} </p>
+        <p>following: {user.following} </p>
+        <p>E-mail{user.email} </p>
+        <p>Hireable{user.hireable} </p>
+        <p>Created on: {user.created_at} </p>
       </div>
     </div>
   );
