@@ -1,4 +1,6 @@
-.bloc-description {
+import styled from 'styled-components';
+
+const StyledDesription = styled.div`
   display: flex;
   flex-direction: row-reverse; /*moving the description to the right*/
   .Description {
@@ -25,4 +27,5 @@
     font-size: 2.6em;
     font-weight: bolder;
   }
-}
+`;
+export default StyledDesription;

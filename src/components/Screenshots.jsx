@@ -1,8 +1,8 @@
-import './scss/Screenshots.scss';
+import StyledScreenShot from './styledComponents/SscreenShots';
 
 function Screenshots() {
   return (
-    <div className="Screenshots">
+    <StyledScreenShot>
       <h1 className="titleAPI">EXAMPLES OF API</h1>
       <article className="Events">
         <img
@@ -16,7 +16,7 @@ function Screenshots() {
           alt="ScreenShots"
         />
       </article>
-    </div>
+    </StyledScreenShot>
   );
 }
 

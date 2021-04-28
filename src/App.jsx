@@ -4,13 +4,13 @@ import Home from './components/Home';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import './reset.css';
-import StyledApp from './StyledApp';
 import UserStats from './components/UserStats';
+import StyledApp from './components/styledComponents/Sapp';
 
 function App() {
   return (
     <Router>
-      <StyledApp>
+      <StyledApp className="App">
         <Header />
 
         <Switch>

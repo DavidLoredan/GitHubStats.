@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import './UserStarsRepo.scss';
+import StyledUserRepo from './styledComponents/SuserRepo';
 
 function UserRepo() {
   const [repolist, setRepolist] = useState([]);
@@ -14,7 +14,7 @@ function UserRepo() {
   return (
     <div>
       <p>Liste des repos (nom-description-techno)</p>
-      <section className="UserStarsRepo">
+      <StyledUserRepo className="UserStarsRepo">
         <div className="cardeList">
           {repolist
             .sort(function compare(a, b) {
@@ -35,7 +35,7 @@ function UserRepo() {
               );
             })}
         </div>
-      </section>
+      </StyledUserRepo>
     </div>
   );
 }
