@@ -32,7 +32,7 @@
     border-style: solid;
     width: 180px;
     height: auto;
-    background-color: rgba($color: #232529, $alpha: 0.8);
+    background-color: rgba(35, 37, 41, 0.8);
     margin: 0 3px 0 5px;
     margin-bottom: 10px;
 
@@ -43,6 +43,7 @@
       }
       .repoDesc {
         margin: 20px 0 5px 2px;
+        text-align: center;
       }
     }
 
