@@ -20,8 +20,8 @@ function UserRepoDate() {
         <p>The five most recently created repos</p>
         <div className="cardeList">
           {repolist
-            .sort(function compare(a, b) {
-              return Date.parse(b.created_at) - Date.parse(a.created_at);
+            .sort(function compare(repoA, repoB) {
+              return repoB.created_at - repoA.created_at;
             })
             .slice(0, 5)
             .map((repo) => {
@@ -29,7 +29,9 @@ function UserRepoDate() {
                 <ul className="carde">
                   <div className="repoInfo">
                     <li className="repoName">{repo.name}</li>
-                    <li className="repoDesc">{repo.created_at}</li>
+                    <li className="repoDesc">
+                      {repo.created_at.substring(0, 10)}
+                    </li>
                   </div>
                   <div className="repoTechno">
                     <li className={repo.language}>{repo.language}</li>
