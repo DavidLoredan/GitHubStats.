@@ -1,4 +1,6 @@
-.UserInfo {
+import styled from 'styled-components';
+
+const StyledUserInfo = styled.div`
   background-color: rgba(0, 217, 255, 0.9);
   border-radius: 25px 10px;
   .userAvatar {
@@ -11,4 +13,5 @@
   .userName {
     font-size: xx-large;
   }
-}
+`;
+export default StyledUserInfo;

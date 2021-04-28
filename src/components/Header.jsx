@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import './scss/Header.scss';
 import { useHistory } from 'react-router-dom';
+import StyledHeader from './styledComponents/Sheader';
 
 function Header() {
   const [query, setQuery] = useState('');
@@ -10,7 +10,7 @@ function Header() {
   };
 
   return (
-    <div className="Header">
+    <StyledHeader>
       <div>
         <img
           className="loLogo"
@@ -38,7 +38,7 @@ function Header() {
           search
         </button>
       </div>
-    </div>
+    </StyledHeader>
   );
 }
 export default Header;

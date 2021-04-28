@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import './UserStarsRepo.scss';
+import StyledUserRepo from './styledComponents/SuserRepo';
 
 function UserRepoDate() {
   const [repolist, setRepolist] = useState([]);
@@ -12,7 +12,7 @@ function UserRepoDate() {
   }, []);
 
   return (
-    <div>
+    <StyledUserRepo>
       <p>Liste des 5 repos les plus récents(nom-date-de création-langage)</p>
       <section className="UserStarsRepo">
         <div className="cardeList">
@@ -42,7 +42,7 @@ function UserRepoDate() {
             })}
         </div>
       </section>
-    </div>
+    </StyledUserRepo>
   );
 }
 export default UserRepoDate;

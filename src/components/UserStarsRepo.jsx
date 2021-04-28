@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-import './UserStarsRepo.scss';
+import StyledUserRepo from './styledComponents/SuserRepo';
 
 function UserStarsRepo() {
   const [repoList, setrepoList] = useState([]);
@@ -15,7 +15,7 @@ function UserStarsRepo() {
   }, [login]);
 
   return (
-    <div>
+    <StyledUserRepo>
       <section className="UserStarsRepo">
         <p>
           <img
@@ -46,7 +46,7 @@ function UserStarsRepo() {
             })}
         </div>
       </section>
-    </div>
+    </StyledUserRepo>
   );
 }
 

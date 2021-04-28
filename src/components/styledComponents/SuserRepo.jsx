@@ -1,4 +1,6 @@
-.UserStarsRepo {
+import styled from 'styled-components';
+
+const StyledUserRepo = styled.div`
   border: 2px;
   border-color: black;
   border-style: solid;
@@ -6,11 +8,16 @@
   width: 90vw;
   padding: 10px;
   border-radius: 10px;
-  background-color: rgba($color: #00d9ff, $alpha: 0.5);
-
+  background-color: rgba(0, 217, 255, 0.8);
+  border-radius: 45px 10px;
+  -webkit-box-shadow: 0px 5px 15px 6px #22314a;
+  box-shadow: 0px 5px 15px 6px #22314a;
   p {
     text-align: left;
-    margin-bottom: 15px;
+    margin: 30px;
+    font-weight: bold;
+    font-size: x-large;
+
     img {
       height: 3vh;
     }
@@ -32,7 +39,7 @@
     border-style: solid;
     width: 180px;
     height: auto;
-    background-color: rgba(35, 37, 41, 0.8);
+    background-color: rgba(#232529, 0.5);
     margin: 0 3px 0 5px;
     margin-bottom: 10px;
 
@@ -43,7 +50,6 @@
       }
       .repoDesc {
         margin: 20px 0 5px 2px;
-        text-align: center;
       }
     }
 
@@ -107,15 +113,17 @@
       }
     }
   }
-}
 
-@media (max-width: 600px) {
-  .UserStarsRepo {
-    .carde {
-      border: 2px;
-      border-radius: 10px;
-      border-style: solid;
-      width: 100%;
+  @media (max-width: 700px) {
+    .UserStarsRepo {
+      .carde {
+        border: 2px;
+        border-radius: 10px;
+        border-style: solid;
+        width: 100%;
+      }
     }
   }
-}
+`;
+
+export default StyledUserRepo;

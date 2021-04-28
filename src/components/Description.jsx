@@ -1,8 +1,8 @@
-import './scss/Description.scss';
+import StyledDesription from './styledComponents/Sdescription';
 
 function Description() {
   return (
-    <div className="bloc-description">
+    <StyledDesription>
       <div className="Description">
         <h1>Description</h1>
         <p>
@@ -23,7 +23,7 @@ function Description() {
           amet.
         </p>
       </div>
-    </div>
+    </StyledDesription>
   );
 }
 export default Description;
