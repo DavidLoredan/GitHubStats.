@@ -23,21 +23,23 @@ function UserRepoDate() {
             .slice(0, 5)
             .map((repo) => {
               return (
-                <ul className="carde">
-                  <div className="repoInfo">
-                    <li className="repoName">{repo.name}</li>
-                    <li className="repoDesc">
-                      {repo.created_at
-                        .substring(0, 10)
-                        .split('-')
-                        .reverse()
-                        .join('-')}
-                    </li>
-                  </div>
-                  <div className="repoTechno">
-                    <li className={repo.language}>{repo.language}</li>
-                  </div>
-                </ul>
+                <a href={repo.html_url} target="_blank" rel="noreferrer">
+                  <ul className="carde">
+                    <div className="repoInfo">
+                      <li className="repoName">{repo.name}</li>
+                      <li className="repoDesc">
+                        {repo.created_at
+                          .substring(0, 10)
+                          .split('-')
+                          .reverse()
+                          .join('-')}
+                      </li>
+                    </div>
+                    <div className="repoTechno">
+                      <li className={repo.language}>{repo.language}</li>
+                    </div>
+                  </ul>
+                </a>
               );
             })}
         </div>

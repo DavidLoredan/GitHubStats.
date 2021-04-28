@@ -29,6 +29,11 @@ const StyledUserRepo = styled.div`
     justify-content: space-evenly;
   }
 
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
   .carde {
     display: flex;
     flex-direction: column;
