@@ -1,33 +1,26 @@
-import React, { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import axios from 'axios';
 import './UserStarsRepo.scss';
 
-function UserStarsRepo() {
-  const [repoList, setrepoList] = useState([]);
+function UserRepo() {
+  const [repolist, setRepolist] = useState([]);
 
   useEffect(() => {
-    axios.get('https://api.github.com/users/bob/starred').then(({ data }) => {
-      setrepoList(data);
+    axios.get('https://api.github.com/users/erriep/repos').then(({ data }) => {
+      setRepolist(data);
     });
   }, []);
 
   return (
     <div>
+      <p>Liste des repos (nom-description-techno)</p>
       <section className="UserStarsRepo">
-        <p>
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/%C3%89toile_d%27or.svg/1200px-%C3%89toile_d%27or.svg.png"
-            alt=""
-          />
-          Stars&apos;s Repo
-        </p>
         <div className="cardeList">
-          {repoList
-            .sort(function (x, y) {
-              // Here, we sort the array by size project
-              return x.size - y.size;
+          {repolist
+            .sort(function compare(a, b) {
+              return b.size - a.size;
             })
-            .slice(0, 5) // Here, we take the first five elements
+            .slice(0, 5)
             .map((repo) => {
               return (
                 <ul className="carde">
@@ -46,5 +39,4 @@ function UserStarsRepo() {
     </div>
   );
 }
-
-export default UserStarsRepo;
+export default UserRepo;
