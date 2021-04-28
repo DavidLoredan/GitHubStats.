@@ -1,8 +1,8 @@
-import './ContactUs.scss';
+import StyledContactUs from './styledComponents/ScontactUs';
 
 function ContactUs() {
   return (
-    <div>
+    <StyledContactUs>
       <div className="ContactUs">
         <form id="contact-form" method="POST" className="form">
           <p className="form">How do we know you?</p>
@@ -51,7 +51,7 @@ function ContactUs() {
           <p>Tél: 01 02 03 04 05</p>
         </div>
       </div>
-    </div>
+    </StyledContactUs>
   );
 }
 export default ContactUs;

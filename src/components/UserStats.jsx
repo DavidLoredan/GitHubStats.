@@ -1,17 +1,17 @@
 import React from 'react';
 import '../reset.css';
-import './scss/UserStats.scss';
+import StyledUserStats from './styledComponents/SuserStats';
 import UserInfo from './UserInfo';
 import UserStarsRepo from './UserStarsRepo';
 import UserRepo from './UserRepo';
 
 function UserStats() {
   return (
-    <div className="UserStats">
+    <StyledUserStats>
       <UserInfo />
       <UserStarsRepo />
       <UserRepo />
-    </div>
+    </StyledUserStats>
   );
 }
 export default UserStats;

@@ -1,8 +1,8 @@
-import './scss/Events.scss';
+import StyledEvent from './styledComponents/Sevents';
 
 function Events() {
   return (
-    <div className="EventsContainer">
+    <StyledEvent>
       <h1 className="eventsTitle">COMING EVENTS</h1>
       <article className="Events">
         <img
@@ -26,7 +26,7 @@ function Events() {
           alt="Event"
         />
       </article>
-    </div>
+    </StyledEvent>
   );
 }
 

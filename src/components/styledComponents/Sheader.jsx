@@ -1,4 +1,6 @@
-.Header {
+import styled from 'styled-components';
+
+const StyledHeader = styled.div`
   display: flex;
   background-image: url('https://cdn.hipwallpaper.com/i/56/18/D7hxtw.jpg');
   height: 30vh;
@@ -78,4 +80,6 @@
       height: 80px;
     }
   }
-}
+`;
+
+export default StyledHeader;

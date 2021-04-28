@@ -1,9 +1,9 @@
 import React from 'react';
-import './Footer.scss';
+import StyledFooter from './styledComponents/Sfooter';
 
 function Footer() {
   return (
-    <>
+    <StyledFooter>
       <div className="contact">
         <div className="bloc">
           <h1>CONTACT US</h1>
@@ -45,7 +45,7 @@ function Footer() {
         </a>
         <h3>©2021 WILD & SONS. ALL RIGHTS RESERVED</h3>
       </div>
-    </>
+    </StyledFooter>
   );
 }
 export default Footer;

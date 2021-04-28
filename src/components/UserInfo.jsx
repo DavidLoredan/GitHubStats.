@@ -1,8 +1,8 @@
 import '../reset.css';
-import './UserInfo.scss';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
+import StyledUserInfo from './styledComponents/SuserInfo';
 
 function UserInfo() {
   const [user, setUser] = useState([]);
@@ -13,7 +13,7 @@ function UserInfo() {
     });
   }, [login]);
   return (
-    <div className="UserInfo">
+    <StyledUserInfo>
       <img className="userAvatar" srcSet={user.avatar_url} alt="Avatar" />
 
       <div className="userDetail">
@@ -25,7 +25,7 @@ function UserInfo() {
         <p>Hireable{user.hireable} </p>
         <p>Created on: {user.created_at} </p>
       </div>
-    </div>
+    </StyledUserInfo>
   );
 }
 
