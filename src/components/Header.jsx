@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 import StyledHeader from './styledComponents/Sheader';
 
 function Header() {
@@ -12,11 +12,13 @@ function Header() {
   return (
     <StyledHeader>
       <div>
-        <img
-          className="logo"
-          src="https://i.ibb.co/rfPqm9t/Logo-Makr-3-Rg99-U.png"
-          alt="logoGitStats"
-        />
+        <Link to="/">
+          <img
+            className="logo"
+            src="https://i.ibb.co/rfPqm9t/Logo-Makr-3-Rg99-U.png"
+            alt="logoGitStats"
+          />
+        </Link>
       </div>
       <section className="blocColor">
         <div className="title">
