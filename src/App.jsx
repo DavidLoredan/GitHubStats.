@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 
 import './reset.css';
 import './app.scss';
+import UserStats from './components/UserStats';
 
 import UserStats from './components/UserStats';
 

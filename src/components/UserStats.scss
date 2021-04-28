@@ -20,7 +20,6 @@
     padding: 20px;
   }
 
-  .UserStartRepo,
   .UserLastRepo {
     border: 2px;
     border-color: black;
@@ -29,28 +28,13 @@
     width: 80vw;
     padding: 10px;
     border-radius: 10px;
-    background-color: rgba($color: #5ce1e6, $alpha: 0.5);
-
-    p {
+    background: linear-gradient(90deg, #0af6e5, #1b716e, #080f0f) p {
       text-align: center;
     }
 
     .repoList .oneLine {
       display: flex;
       justify-content: space-between;
-
-      .htmlCircle {
-        width: 12px;
-        height: 12px;
-        border: 1px solid;
-        border-radius: 50%;
-        background-color: #e34c26;
-        margin-left: 5px;
-      }
-      .langageUse {
-        display: flex;
-        padding-left: 0;
-      }
     }
   }
   .UserInfo {
