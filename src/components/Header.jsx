@@ -1,6 +1,6 @@
 import { useHistory } from 'react-router-dom';
 import { useState } from 'react';
-import './scss/Header.scss';
+import StyledHeader from './styledComponents/HeaderStyled';
 
 function Header() {
   const [query, setQuery] = useState('');
@@ -10,7 +10,7 @@ function Header() {
   };
 
   return (
-    <div className="Header">
+    <StyledHeader>
       <div>
         <img
           className="loLogo"
@@ -27,18 +27,18 @@ function Header() {
         </div>
       </section>
       <div className="search">
-        <input
-          type="text"
-          className="searchBar"
-          value={query}
-          placeholder="Enter a login Github..."
-          onChange={(e) => setQuery(e.target.value)}
-        />
-        <button className="button" type="button" onClick={handleQueryChange}>
-          search
-        </button>
+        <form action="" onSubmit={handleQueryChange}>
+          <input
+            type="text"
+            className="searchBar"
+            value={query}
+            placeholder="Enter a login Github..."
+            onChange={(e) => setQuery(e.target.value)}
+          />
+          <input className="button" type="submit" value="search" />
+        </form>
       </div>
-    </div>
+    </StyledHeader>
   );
 }
 export default Header;

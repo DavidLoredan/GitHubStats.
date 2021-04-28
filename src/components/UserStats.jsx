@@ -1,6 +1,6 @@
 import React from 'react';
 import '../reset.css';
-import './scss/UserStats.scss';
+import './styledComponents/UserStats.scss';
 import UserInfo from './UserInfo';
 import UserStarsRepo from './UserStarsRepo';
 import UserRepo from './UserRepo';

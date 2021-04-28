@@ -1,4 +1,4 @@
-import './scss/Events.scss';
+import './styledComponents/Events.scss';
 
 function Events() {
   return (
