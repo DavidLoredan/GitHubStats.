@@ -5,11 +5,13 @@ import Footer from './components/Footer';
 
 import './reset.css';
 import './app.scss';
+import UserStats from './components/UserStats';
 
 function App() {
   return (
     <div className="App">
       <Header />
+      <UserStats />
       <Home />
       <Footer />
     </div>
