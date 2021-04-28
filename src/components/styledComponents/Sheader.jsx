@@ -4,28 +4,20 @@ const StyledHeader = styled.div`
   display: flex;
   background-image: url('https://cdn.hipwallpaper.com/i/56/18/D7hxtw.jpg');
   height: 30vh;
-  -webkit-box-shadow: -1px 12px 3px -3px rgba(255, 255, 255, 0.479);
-  box-shadow: -1px 12px 3px -3px rgba(122, 122, 122, 0.6);
 
-  .loBlocColor {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 35vw;
-    height: 90%;
-    margin-left: 7vw;
-    width: 30vw;
-    background-color: rgb(0, 217, 255);
-    border-radius: 45px 10px;
-  }
-
-  .loTitle {
+  .title {
     font-size: 3.5em;
-    margin-top: 10vh;
+    margin-top: 13vh;
+    margin-left: 5vw;
     font-weight: 900;
   }
 
-  .loLogo {
+  .sousTitre {
+    margin-left: 6vw;
+    font-weight: 520;
+  }
+
+  .logo {
     margin-top: 8vh;
     margin-left: 15vw;
     width: 140px;
@@ -44,22 +36,13 @@ const StyledHeader = styled.div`
     font-size: large;
     padding: 10px;
     width: 20vw;
+    margin-left: 15vw;
   }
 
-  button {
-    border-radius: 8px;
-    height: 35px;
-    margin: 5px;
-    border: groove;
-  }
   @media (max-width: 700px) {
-    .Header {
-      height: 20vh;
-    }
-
-    .loTitle {
+    .title {
       font-size: 2.5em;
-      margin-top: 20%;
+      margin-top: 13vh;
     }
 
     .searchBar {
@@ -70,11 +53,11 @@ const StyledHeader = styled.div`
       display: block;
       width: 50px;
       height: 10px;
-      margin: 3%;
-      margin-top: 13%;
+      margin: 1%;
+      margin-top: 13vh;
     }
 
-    .loLogo {
+    .logo {
       margin-top: 50px;
       width: 100px;
       height: 80px;
