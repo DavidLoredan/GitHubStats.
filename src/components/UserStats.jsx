@@ -10,9 +10,9 @@ function UserStats() {
   return (
     <div className="UserStats">
       <UserInfo />
-      <UserStarsRepo />
       <UserRepo />
       <UserRepoDate />
+      <UserStarsRepo />
     </div>
   );
 }
