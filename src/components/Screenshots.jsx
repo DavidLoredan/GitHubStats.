@@ -1,4 +1,4 @@
-import './scss/Screenshots.scss';
+import './styledComponents/Screenshots.scss';
 
 function Screenshots() {
   return (

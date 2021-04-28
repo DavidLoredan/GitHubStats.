@@ -1,9 +1,9 @@
-.Header {
+import styled from 'styled-components';
+
+const StyledHeader = styled.div`
   display: flex;
   background-image: url('https://cdn.hipwallpaper.com/i/56/18/D7hxtw.jpg');
   height: 30vh;
-  -webkit-box-shadow: -1px 12px 3px -3px rgba(255, 255, 255, 0.479);
-  box-shadow: -1px 12px 3px -3px rgba(122, 122, 122, 0.6);
 
   .loBlocColor {
     display: flex;
@@ -13,13 +13,12 @@
     height: 90%;
     margin-left: 7vw;
     width: 30vw;
-    background-color: rgb(0, 217, 255);
     border-radius: 45px 10px;
   }
 
   .loTitle {
     font-size: 3.5em;
-    margin-top: 10vh;
+    margin-top: 13vh;
     font-weight: 900;
   }
 
@@ -44,11 +43,10 @@
     width: 20vw;
   }
 
-  button {
+  .button {
     border-radius: 8px;
     height: 35px;
     margin: 5px;
-    border: groove;
   }
   @media (max-width: 700px) {
     .Header {
@@ -78,4 +76,6 @@
       height: 80px;
     }
   }
-}
+`;
+
+export default StyledHeader;

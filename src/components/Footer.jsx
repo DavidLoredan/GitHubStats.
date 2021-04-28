@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import './scss/Footer.scss';
+import './styledComponents/Footer.scss';
 
 function Footer() {
   return (

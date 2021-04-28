@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './scss/UserStatsStyle.scss';
+import './styledComponents/UserStatsStyle.scss';
 import { useParams } from 'react-router-dom';
 
 function UserStarsRepo() {

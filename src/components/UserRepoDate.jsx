@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import './scss/UserStatsStyle.scss';
+import './styledComponents/UserStatsStyle.scss';
 import { useParams } from 'react-router-dom';
 
 function UserRepoDate() {
@@ -29,7 +29,9 @@ function UserRepoDate() {
                 <ul className="carde">
                   <div className="repoInfo">
                     <li className="repoName">{repo.name}</li>
-                    <li className="repoDesc">{repo.created_at}</li>
+                    <li className="repoDesc">
+                      {repo.created_at.substring(0, 10)}
+                    </li>
                   </div>
                   <div className="repoTechno">
                     <li className={repo.language}>{repo.language}</li>
