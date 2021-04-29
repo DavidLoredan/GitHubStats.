@@ -13,6 +13,11 @@ const StyledFooter = styled.div`
     width: 100vw;
     height: 15vh;
     padding-left: 0.8vw;
+
+    .Link {
+      text-decoration: none;
+      color: black;
+    }
   }
 
   .bloc h1 {

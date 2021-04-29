@@ -7,7 +7,7 @@ function Footer() {
     <StyledFooter>
       <div className="contact">
         <div className="bloc">
-          <Link to="/contact_us">
+          <Link className="Link" to="/contact_us">
             <h1>CONTACT US</h1>
           </Link>
           <div className="logo">
