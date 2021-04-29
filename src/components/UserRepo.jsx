@@ -1,15 +1,19 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import { useParams } from 'react-router-dom';
 import StyledUserRepo from './styledComponents/SuserRepo';
 
 function UserRepo() {
   const [repolist, setRepolist] = useState([]);
+  const { login } = useParams();
 
   useEffect(() => {
-    axios.get('https://api.github.com/users/erriep/repos').then(({ data }) => {
-      setRepolist(data);
-    });
-  }, []);
+    axios
+      .get(`https://api.github.com/users/${login}/repos`)
+      .then(({ data }) => {
+        setRepolist(data);
+      });
+  }, [login]);
 
   return (
     <div>
