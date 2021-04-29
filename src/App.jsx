@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import './reset.css';
 import UserStats from './components/UserStats';
 import StyledApp from './components/styledComponents/Sapp';
+import ContactUs from './components/ContactUs';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Home />
           </Route>
           <Route path="/user/:login" component={UserStats} />
+          <Route path="/contact_us" component={ContactUs} />
         </Switch>
 
         <Footer />

@@ -3,21 +3,26 @@ import styled from 'styled-components';
 const StyledFooter = styled.div`
   .contact {
     display: flex;
-    background-image: url('https://media.istockphoto.com/photos/dice-with-communication-symbols-on-keyboard-picture-id1161344489?k=6&m=1161344489&s=612x612&w=0&h=1I4Q-mgrNzEMJZVmX9XoVpYKh4H0WH03n03LL3FPyds=');
     background-size: cover;
     height: 15vh;
     font-size: 1vw;
   }
 
   .bloc {
-    background-color: rgb(0, 217, 255);
-    width: 30vw;
+    background-color: rgb(210, 210, 210);
+    width: 100vw;
     height: 15vh;
     padding-left: 0.8vw;
+
+    .Link {
+      text-decoration: none;
+      color: black;
+    }
   }
 
   .bloc h1 {
-    text-align: center;
+    text-align: left;
+    margin-left: 30px;
     font-weight: bold;
     font-size: 2vw;
     padding-top: 0.4vh;
@@ -25,8 +30,14 @@ const StyledFooter = styled.div`
   }
 
   .bloc p {
-    color: white;
     font-weight: bold;
+    justify-content: space-around;
+    color: black;
+    font-size: 1vw;
+  }
+
+  .infos {
+    text-align: center;
     justify-content: space-around;
     background-color: black;
     color: white;

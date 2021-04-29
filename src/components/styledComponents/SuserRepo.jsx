@@ -14,7 +14,7 @@ const StyledUserRepo = styled.div`
     text-align: left;
     margin: 30px;
     font-weight: bold;
-    font-size: x-large;
+    font-size: xx-large;
 
     img {
       height: 3vh;
@@ -34,7 +34,8 @@ const StyledUserRepo = styled.div`
 
   .carde {
     background-color: rgb(230, 230, 230);
-    box-shadow: 4px 3px 4px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+    transition: box-shadow 0.3s ease-in-out;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -114,6 +115,9 @@ const StyledUserRepo = styled.div`
         background-color: #00add8;
       }
     }
+  }
+  .carde:hover {
+    box-shadow: 0 25px 40px rgba(0, 0, 0, 0.3);
   }
 
   @media (max-width: 700px) {
