@@ -3,9 +3,13 @@ import styled from 'styled-components';
 const StyledEvent = styled.div`
   .InfoContainer {
     .Infos {
-      display: flex;
       justify-content: space-around;
-      flex-wrap: wrap;
+      display: flex;
+
+      a {
+        text-decoration: none;
+        color: black;
+      }
     }
 
     img {
@@ -45,6 +49,11 @@ const StyledEvent = styled.div`
     border: 2px solid black;
     background-color: rgba(35, 37, 41, 0.5);
     text-align: center;
+  }
+
+  .SubjectTitle {
+    font-size: 3vh;
+    font-weight: bold;
   }
 `;
 export default StyledEvent;

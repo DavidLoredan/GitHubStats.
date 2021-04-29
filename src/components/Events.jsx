@@ -27,30 +27,20 @@ function Events() {
             .slice(0, 2)
             .map((subject) => {
               return (
-                <div className="SubjectInfo">
-                  <img
-                    src={subject.urlToImage}
-                    className="SubjectImage"
-                    alt="SubjectImage"
-                  />
-                  <p className="SubjectTitle">
-                    <b>TITLE</b> : {subject.title}
-                  </p>
-                  <p className="SubjectDesc">
-                    <b>DESCRIPTION</b> : {subject.description}
-                  </p>
-                  <p className="SubjectUrl">
-                    <b>URL</b> :{' '}
-                    <a href={subject.url} target="_blank" rel="noreferrer">
-                      {subject.url}
-                    </a>
-                  </p>
-                  <p className="SubjectDate">
-                    <b>PUBLICATION DATE</b> :
-                    {subject.publishedAt.substring(0, 10)} <br />
-                    {subject.publishedAt.substring(11, 19)}
-                  </p>
-                </div>
+                <a href={subject.url} target="_blank" rel="noreferrer">
+                  <div className="SubjectInfo">
+                    <img
+                      src={subject.urlToImage}
+                      className="SubjectImage"
+                      alt="SubjectImage"
+                    />
+                    <p className="SubjectTitle">{subject.title}</p>
+                    <p className="SubjectDesc">{subject.description}</p>
+                    <p className="SubjectDate">
+                      <b>Published on</b> {subject.publishedAt.substring(0, 10)}{' '}
+                    </p>
+                  </div>
+                </a>
               );
             })}
         </div>
