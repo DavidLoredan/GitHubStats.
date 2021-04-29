@@ -17,8 +17,8 @@ function UserRepo() {
 
   return (
     <div>
-      <p>Liste des repos (nom-description-techno)</p>
       <StyledUserRepo className="UserStarsRepo">
+        <p>List of repositories</p>
         <div className="cardeList">
           {repolist
             .sort(function compare(a, b) {

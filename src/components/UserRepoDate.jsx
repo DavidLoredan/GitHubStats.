@@ -17,7 +17,7 @@ function UserRepoDate() {
 
   return (
     <StyledUserRepo>
-      <p>Liste des 5 repos les plus récents(nom-date-de création-langage)</p>
+      <p>The five most recently created repositories</p>
       <section className="UserStarsRepo">
         <div className="cardeList">
           {repolist

@@ -14,7 +14,7 @@ const StyledUserRepo = styled.div`
     text-align: left;
     margin: 30px;
     font-weight: bold;
-    font-size: x-large;
+    font-size: xx-large;
 
     img {
       height: 3vh;
