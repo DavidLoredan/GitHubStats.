@@ -39,15 +39,5 @@ const StyledUserStats = styled.div`
       justify-content: space-between;
     }
   }
-  .UserInfo {
-    color: black;
-    display: flex;
-    justify-content: center;
-
-    img {
-      height: 30px;
-      margin-right: 20px;
-    }
-  }
 `;
 export default StyledUserStats;
