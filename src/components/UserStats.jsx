@@ -4,13 +4,15 @@ import StyledUserStats from './styledComponents/SuserStats';
 import UserInfo from './UserInfo';
 import UserStarsRepo from './UserStarsRepo';
 import UserRepo from './UserRepo';
+import UserRepoDate from './UserRepoDate';
 
 function UserStats() {
   return (
     <StyledUserStats>
       <UserInfo />
-      <UserStarsRepo />
       <UserRepo />
+      <UserRepoDate />
+      <UserStarsRepo />
     </StyledUserStats>
   );
 }
