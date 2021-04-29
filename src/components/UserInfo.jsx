@@ -7,11 +7,13 @@ import StyledUserInfo from './styledComponents/SuserInfo';
 function UserInfo() {
   const [user, setUser] = useState([]);
   const { login } = useParams();
+
   useEffect(() => {
     axios.get(`https://api.github.com/users/${login}`).then(({ data }) => {
       setUser(data);
     });
   }, [login]);
+
   return (
     <StyledUserInfo>
       <img className="userAvatar" srcSet={user.avatar_url} alt="Avatar" />
