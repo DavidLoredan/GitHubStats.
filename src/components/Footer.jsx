@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import StyledFooter from './styledComponents/Sfooter';
 
 function Footer() {
@@ -6,7 +7,9 @@ function Footer() {
     <StyledFooter>
       <div className="contact">
         <div className="bloc">
-          <h1>CONTACT US</h1>
+          <Link to="/contact_us">
+            <h1>CONTACT US</h1>
+          </Link>
           <div className="logo">
             <img
               src="https://freepikpsd.com/wp-content/uploads/2019/10/adresse-icone-png-6-Transparent-Images.png"
