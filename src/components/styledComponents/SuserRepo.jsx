@@ -27,6 +27,11 @@ const StyledUserRepo = styled.div`
     justify-content: space-evenly;
   }
 
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
   .carde {
     background-color: rgb(230, 230, 230);
     box-shadow: 4px 3px 4px 5px rgba(0, 0, 0, 0.1);
