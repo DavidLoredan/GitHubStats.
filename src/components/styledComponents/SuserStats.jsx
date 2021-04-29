@@ -45,7 +45,7 @@ const StyledUserStats = styled.div`
     justify-content: center;
 
     img {
-      height: 70px;
+      height: 30px;
       margin-right: 20px;
     }
   }
