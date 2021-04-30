@@ -8,12 +8,10 @@ const StyledHeader = styled.div`
   .title {
     font-size: 3.5em;
     margin-top: 13vh;
-    margin-left: 5vw;
     font-weight: 900;
   }
 
   .sousTitre {
-    margin-left: 6vw;
     font-weight: 520;
   }
 
@@ -23,6 +21,7 @@ const StyledHeader = styled.div`
     width: 140px;
     height: 120px;
     margin-left: 5vw;
+    margin-right: 5vw;
   }
 
   .search {

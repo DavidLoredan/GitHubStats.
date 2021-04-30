@@ -19,13 +19,29 @@ function UserInfo() {
       <img className="userAvatar" srcSet={user.avatar_url} alt="Avatar" />
 
       <div className="userDetail">
-        <h1 className="userName">{user.login} </h1>
+        <a
+          href={`https://github.com/${login}`}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <h1> {user.login} </h1>
+        </a>
         <p>{user.company} </p>
-        <p>followers: {user.followers} </p>
-        <p>following: {user.following} </p>
-        <p>E-mail{user.email} </p>
-        <p>Hireable{user.hireable} </p>
-        <p>Created on: {user.created_at} </p>
+        <a
+          href={`https://github.com/${login}?tab=followers`}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <p>Followers: {user.followers} </p>
+        </a>
+        <a
+          href={`https://github.com/${login}?tab=following`}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <p>Following: {user.following} </p>
+        </a>
+        <p>Created at: {user.created_at} </p>
       </div>
     </StyledUserInfo>
   );

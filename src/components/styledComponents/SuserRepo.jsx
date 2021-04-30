@@ -1,22 +1,20 @@
 import styled from 'styled-components';
 
 const StyledUserRepo = styled.div`
-  border: 2px;
+  border: 1px;
   border-color: black;
   border-style: solid;
   margin-bottom: 20px;
   width: 90vw;
   padding: 10px;
   border-radius: 10px;
-  background-color: rgba(0, 217, 255, 0.8);
-  border-radius: 45px 10px;
-  -webkit-box-shadow: 0px 5px 15px 6px #22314a;
-  box-shadow: 0px 5px 15px 6px #22314a;
+  background-color: rgb(199, 199, 199);
+
   p {
     text-align: left;
     margin: 30px;
     font-weight: bold;
-    font-size: x-large;
+    font-size: xx-large;
 
     img {
       height: 3vh;
@@ -29,19 +27,25 @@ const StyledUserRepo = styled.div`
     justify-content: space-evenly;
   }
 
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
   .carde {
+    background-color: rgb(230, 230, 230);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+    transition: box-shadow 0.3s ease-in-out;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border: 5px;
-    border-radius: 10px;
+    border: 1px;
+    border-radius: 5px;
     border-color: black;
     border-style: solid;
-    width: 180px;
-    height: auto;
-    background-color: rgba(#232529, 0.5);
-    margin: 0 3px 0 5px;
-    margin-bottom: 10px;
+    width: 280px;
+    height: 200px;
+    margin: 0 3px 10px 5px;
 
     .repoInfo {
       .repoName {
@@ -56,62 +60,64 @@ const StyledUserRepo = styled.div`
     .repoTechno {
       text-align: right;
 
+      li {
+        padding: 5px;
+        border-radius: 0 0 5px 5px;
+        background-color: #b8b8b8;
+        font-weight: 600;
+      }
+
       .JavaScript {
         background-color: #f1e05a;
-        padding: 5px;
-        border-radius: 0 0 10px 10px;
       }
       .Python {
-        padding: 5px;
         background-color: #3572a5;
-        border-radius: 0 0 10px 10px;
       }
       .HTML {
-        padding: 5px;
         background-color: #e34c26;
-        border-radius: 0 0 10px 10px;
       }
       .CSS {
-        padding: 5px;
         background-color: #563d7c;
-        border-radius: 0 0 10px 10px;
       }
       .TypeScript {
-        padding: 5px;
         background-color: #2b7489;
-        border-radius: 0 0 10px 10px;
       }
       .PHP {
-        padding: 5px;
         background-color: #4f5d95;
-        border-radius: 0 0 10px 10px;
       }
       .Shell {
-        padding: 5px;
         background-color: #89e051;
-        border-radius: 0 0 10px 10px;
       }
       .Ruby {
-        padding: 5px;
         background-color: #701516;
-        border-radius: 0 0 10px 10px;
       }
       .SCSS {
         padding: 5px;
         background-color: #c6538c;
-        border-radius: 0 0 10px 10px;
       }
       .Java {
         padding: 5px;
         background-color: #b07219;
-        border-radius: 0 0 10px 10px;
       }
       .Vue {
-        padding: 5px;
         background-color: #2c3e50;
-        border-radius: 0 0 10px 10px;
+      }
+      .Clojure {
+        background-color: #db5855;
+      }
+      .ASP {
+        background-color: #178600;
+      }
+      .C {
+        background-color: #555555;
+      }
+      .Go {
+        background-color: #00add8;
       }
     }
+  }
+  .carde:hover {
+    box-shadow: 0 25px 40px rgba(0, 0, 0, 0.3);
   }
 
   @media (max-width: 700px) {
@@ -120,7 +126,8 @@ const StyledUserRepo = styled.div`
         border: 2px;
         border-radius: 10px;
         border-style: solid;
-        width: 100%;
+        width: 90vw;
+        height: auto;
       }
     }
   }
