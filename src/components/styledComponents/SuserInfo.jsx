@@ -25,6 +25,13 @@ const StyledUserInfo = styled.div`
   .userDetail {
     font-size: x-large;
     margin-top: 10px;
+    .nameAndActivity {
+      display: flex;
+      justify-content: space-between;
+      .imgActivity {
+        height: 40px;
+      }
+    }
   }
   .userName {
     font-size: xxx-large;

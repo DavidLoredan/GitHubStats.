@@ -20,11 +20,6 @@ function UserInfo() {
     const miliDateOfDay = Date.parse(dateOfDay); //  Time in milliseconds between today and 01-01-1970
     const calOfDay =
       (miliDateOfDay - miliUserDateConnect) / (60 * 60 * 24 * 1000); // calculate the time elapsed between the last connection and today in days
-    console.log(miliDateOfDay);
-    console.log(miliUserDateConnect);
-    console.log(calOfDay);
-    console.log(activity);
-
     return calOfDay;
   }
 
@@ -33,14 +28,11 @@ function UserInfo() {
     saneData.created_at = data.created_at.substring(0, 10);
     return saneData;
   }
-  function formatActivity(data) {
-    const userActivity = calculatActivity(data);
-    setActivity(userActivity);
-
-    if (activity < 7) return 'HightActivity';
-    if (activity < 14) return 'MediumActivity';
-    if (activity < 30) return 'LowActivity';
-    return 'nul';
+  function formatActivity() {
+    if (activity <= 7) return 'activityhight';
+    if (activity <= 14) return 'activitymedium';
+    if (activity <= 60) return 'activitylow';
+    return 'activitynul';
   }
   useEffect(() => {
     axios.get(`https://api.github.com/users/${login}`).then(({ data }) => {
@@ -50,12 +42,13 @@ function UserInfo() {
       setUser(saneData);
       const pictureActivity = formatActivity(data);
       setFormActivity(pictureActivity);
+      const image = document.querySelector('.imgActivity');
+      image.src = `../img/${formActivity}.png`;
     });
-  }, [login]);
+  }, [login, formActivity]);
 
   return (
     <StyledUserInfo>
-      <p>{formActivity}</p>
       <img className="userAvatar" srcSet={user.avatar_url} alt="Avatar" />
 
       <div className="userDetail">
@@ -63,8 +56,10 @@ function UserInfo() {
           href={`https://github.com/${login}`}
           target="_blank"
           rel="noreferrer"
+          className="nameAndActivity"
         >
           <h1> {user.login} </h1>
+          <img src="" alt="" className="imgActivity" />
         </a>
         <p>{user.company} </p>
         <a
