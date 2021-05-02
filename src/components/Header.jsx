@@ -1,13 +1,28 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useHistory, Link } from 'react-router-dom';
+import axios from 'axios';
+import styled from 'styled-components';
 import StyledHeader from './styledComponents/Sheader';
+import StyledUserInfo from './styledComponents/SuserInfo';
+import UserStats from './UserStats';
 
+const MiniUser = styled.div`
+  position: relative;
+`;
 function Header() {
   const [query, setQuery] = useState('');
+  const [user, setUser] = useState([]);
   const history = useHistory();
   const handleQueryChange = () => {
     history.push(`/user/${query}`);
   };
+  console.log(query);
+
+  useEffect(() => {
+    axios.get(`https://api.github.com/users/${query}`).then(({ data }) => {
+      setUser(data);
+    });
+  }, [query]);
 
   return (
     <StyledHeader>
@@ -38,6 +53,26 @@ function Header() {
             onChange={(e) => setQuery(e.target.value)}
           />
         </form>
+        {user.login && (
+          <a href={`/user/${query}`} component={UserStats}>
+            <MiniUser>
+              <StyledUserInfo className="miniUser">
+                <img
+                  className="userAvatar"
+                  srcSet={user.avatar_url}
+                  alt="Avatar"
+                />
+                <div className="userDetail">
+                  <h1> {user.login} </h1>
+                  <p>{user.company} </p>
+                  <p>Followers: {user.followers} </p>
+                  <p>Following: {user.following} </p>
+                  <p>Created at: {user.created_at} </p>
+                </div>
+              </StyledUserInfo>
+            </MiniUser>
+          </a>
+        )}
       </div>
     </StyledHeader>
   );

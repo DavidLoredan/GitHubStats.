@@ -25,17 +25,16 @@ const StyledHeader = styled.div`
   }
 
   .search {
-    display: flex;
-    align-items: flex-end;
     margin: 10%;
-  }
+    display: block;
 
-  .searchBar {
-    border-radius: 10px;
-    font-size: large;
-    padding: 10px;
-    width: 20vw;
-    margin-left: 15vw;
+    .searchBar {
+      border-radius: 10px;
+      font-size: large;
+      padding: 10px;
+      width: 20vw;
+      margin-left: 15vw;
+    }
   }
 
   @media (max-width: 700px) {
