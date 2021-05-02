@@ -8,6 +8,10 @@ import UserStats from './UserStats';
 
 const MiniUser = styled.div`
   position: relative;
+  a {
+    text-decoration: none;
+    color: black;
+  }
 `;
 function Header() {
   const [query, setQuery] = useState('');
@@ -16,7 +20,6 @@ function Header() {
   const handleQueryChange = () => {
     history.push(`/user/${query}`);
   };
-  console.log(query);
 
   useEffect(() => {
     axios.get(`https://api.github.com/users/${query}`).then(({ data }) => {
@@ -54,8 +57,8 @@ function Header() {
           />
         </form>
         {user.login && (
-          <a href={`/user/${query}`} component={UserStats}>
-            <MiniUser>
+          <MiniUser>
+            <a href={`/user/${query}`} component={UserStats}>
               <StyledUserInfo className="miniUser">
                 <img
                   className="userAvatar"
@@ -70,8 +73,8 @@ function Header() {
                   <p>Created at: {user.created_at} </p>
                 </div>
               </StyledUserInfo>
-            </MiniUser>
-          </a>
+            </a>
+          </MiniUser>
         )}
       </div>
     </StyledHeader>
