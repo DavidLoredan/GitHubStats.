@@ -42,8 +42,6 @@ function UserInfo() {
       setUser(saneData);
       const pictureActivity = formatActivity(data);
       setFormActivity(pictureActivity);
-      const image = document.querySelector('.imgActivity');
-      image.src = `../img/${formActivity}.png`;
     });
   }, [login, formActivity]);
 
@@ -59,7 +57,11 @@ function UserInfo() {
           className="nameAndActivity"
         >
           <h1> {user.login} </h1>
-          <img src="" alt="" className="imgActivity" />
+          <img
+            src={`../img/${formActivity}.png`}
+            alt="image_activity"
+            className="imgActivity"
+          />
         </a>
         <p>{user.company} </p>
         <a
