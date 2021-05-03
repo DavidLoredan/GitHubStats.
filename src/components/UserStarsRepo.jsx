@@ -17,13 +17,13 @@ function UserStarsRepo() {
   return (
     <StyledUserRepo>
       <section className="UserStarsRepo">
-        <p>
+        <h2>
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/%C3%89toile_d%27or.svg/1200px-%C3%89toile_d%27or.svg.png"
             alt=""
           />
           Starred repos
-        </p>
+        </h2>
         <div className="cardeList">
           {repoList
             .sort(function compare(x, y) {
@@ -33,17 +33,18 @@ function UserStarsRepo() {
             .slice(0, 5) // Here, we take the first five elements
             .map((repo) => {
               return (
-                <a href={repo.html_url} target="_blank" rel="noreferrer">
-                  <ul className="carde">
-                    <div className="repoInfo">
+                <ul className="carde">
+                  <div className="repoInfo">
+                    <a href={repo.html_url} target="_blank" rel="noreferrer">
                       <li className="repoName">{repo.name}</li>
-                      <li className="repoDesc">{repo.description}</li>
-                    </div>
-                    <div className="repoTechno">
-                      <li className={repo.language}>{repo.language}</li>
-                    </div>
-                  </ul>
-                </a>
+                    </a>
+                    <li className="repoDesc">{repo.description}</li>
+                  </div>
+                  <div className="repoTechno">
+                    <li className="languageRepo">{repo.language}</li>
+                    <p className={repo.language} />
+                  </div>
+                </ul>
               );
             })}
         </div>
