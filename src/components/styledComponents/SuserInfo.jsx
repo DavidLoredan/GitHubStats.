@@ -19,7 +19,7 @@ const StyledUserInfo = styled.div`
     text-decoration: none;
     color: black;
   }
-  p {
+  h2 {
     padding: 2px;
   }
   .userDetail {

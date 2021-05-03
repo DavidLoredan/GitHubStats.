@@ -18,7 +18,7 @@ function UserRepo() {
   return (
     <div>
       <StyledUserRepo className="UserStarsRepo">
-        <p>List of repositories</p>
+        <h2>List of repositories</h2>
         <div className="cardeList">
           {repolist
             .sort(function compare(a, b) {
@@ -27,17 +27,18 @@ function UserRepo() {
             .slice(0, 5)
             .map((repo) => {
               return (
-                <a href={repo.html_url} target="_blank" rel="noreferrer">
-                  <ul className="carde">
-                    <div className="repoInfo">
+                <ul className="carde">
+                  <div className="repoInfo">
+                    <a href={repo.html_url} target="_blank" rel="noreferrer">
                       <li className="repoName">{repo.name}</li>
-                      <li className="repoDesc">{repo.description}</li>
-                    </div>
-                    <div className="repoTechno">
-                      <li className={repo.language}>{repo.language}</li>
-                    </div>
-                  </ul>
-                </a>
+                    </a>
+                    <li className="repoDesc">{repo.description}</li>
+                  </div>
+                  <div className="repoTechno">
+                    <li className="languageRepo">{repo.language}</li>
+                    <p className={repo.language} />
+                  </div>
+                </ul>
               );
             })}
         </div>
