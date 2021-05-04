@@ -9,7 +9,7 @@ const StyledFooter = styled.div`
   }
 
   .bloc {
-    background-color: rgb(210, 210, 210);
+    background-color: #0e6476;
     width: 100vw;
     height: 15vh;
     padding-left: 0.8vw;
@@ -24,7 +24,7 @@ const StyledFooter = styled.div`
     text-align: left;
     margin-left: 30px;
     font-weight: bold;
-    font-size: 2vw;
+    font-size: 35px;
     padding-top: 0.4vh;
     margin-bottom: 1vh;
   }
@@ -32,21 +32,21 @@ const StyledFooter = styled.div`
   .bloc p {
     font-weight: bold;
     justify-content: space-around;
-    color: black;
-    font-size: 1vw;
+    color: white;
+    font-size: 20px;
   }
 
   .infos {
     text-align: center;
     justify-content: space-around;
-    background-color: black;
+    background-color: #0e6476;
     color: white;
-    font-size: 1vw;
+    font-size: 1.4vh;
   }
 
   .link {
-    color: white;
-    margin-right: 10vw;
+    color: #f5f7f7;
+    margin-right: 7%;
   }
 
   h3 {
@@ -63,8 +63,33 @@ const StyledFooter = styled.div`
   }
 
   .logo img {
-    width: 1.5vw;
-    height: 1.5vh;
+    width: 20px;
+    height: 20px;
+  }
+
+  @media (max-width: 700px) {
+    .bloc h1 {
+      font-size: x-small;
+    }
+    .bloc p {
+      font-size: x-small;
+    }
+    .infos {
+      font-size: 1.1vh;
+    }
+    .link {
+      margin-right: 10%;
+    }
+    .logo img {
+      font-size: x-small;
+      font-size: y-small;
+    }
+    .bloc {
+      font-size: y-small;
+    }
+    .contact {
+      font-size: y-small;
+    }
   }
 `;
 
