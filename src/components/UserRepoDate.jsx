@@ -8,8 +8,13 @@ function UserRepoDate() {
   const { login } = useParams();
 
   function repoCreationDate(data) {
-    const saneData = { ...data };
-    saneData.created_at = data.created_at.substring(0, 10);
+    const saneData = [...data];
+    for (let i = 0; i < saneData.length; i += 1) {
+      const repo = saneData[i];
+      repo.created_at = repo.created_at.substring(0, 10);
+      saneData[i] = repo;
+    }
+
     return saneData;
   }
 
