@@ -31,11 +31,7 @@ function Header() {
     <StyledHeader>
       <div>
         <Link to="/">
-          <img
-            className="logo"
-            src="https://i.ibb.co/rfPqm9t/Logo-Makr-3-Rg99-U.png"
-            alt="logoGitStats"
-          />
+          <img className="logo" src="../img/Thak22.png" alt="logoGitStats" />
         </Link>
       </div>
       <section className="blocColor">
