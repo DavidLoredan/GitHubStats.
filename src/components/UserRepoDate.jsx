@@ -29,7 +29,7 @@ function UserRepoDate() {
 
   return (
     <StyledUserRepo>
-      <h2>The most recently created repositories</h2>
+      <h2>The repositories have recently created</h2>
       <section className="UserStarsRepo">
         <div className="cardeList">
           {repolist
