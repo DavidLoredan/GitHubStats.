@@ -44,7 +44,8 @@ function UserRepoDate() {
                     <a href={repo.html_url} target="_blank" rel="noreferrer">
                       <li className="repoName">{repo.name}</li>
                     </a>
-                    <li className="repoDesc">{repo.created_at}</li>
+                    <li className="repoDesc">{repo.description}</li>
+                    <li className="">{repo.created_at}</li>
                   </div>
                   <div className="repoTechno">
                     <li className="languageRepo">{repo.language}</li>
