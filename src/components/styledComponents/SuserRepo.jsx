@@ -33,13 +33,20 @@ const StyledUserRepo = styled.div`
     width: 280px;
     height: 300px;
 
-    .repoInfo {
       .repoName {
         font-weight: 800;
         text-align: center;
+        font-size: 1.6em;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
       .repoDesc {
         margin: 20px 0 5px 2px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .repoInfo{
+        padding: 0 10px 0 10px;
       }
     }
 
