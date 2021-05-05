@@ -27,7 +27,12 @@ function Events() {
             .slice(0, 2)
             .map((subject) => {
               return (
-                <a href={subject.url} target="_blank" rel="noreferrer">
+                <a
+                  href={subject.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  key={subject.title}
+                >
                   <div className="SubjectInfo">
                     <img
                       src={subject.urlToImage}
