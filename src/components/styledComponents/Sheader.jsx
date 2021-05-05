@@ -7,7 +7,7 @@ const StyledHeader = styled.div`
 
   .title h1 {
     font-size: 3.5em;
-    margin-top: 25%;
+    margin-top: 32%;
     font-weight: 900;
     color: #f5f7f7;
   }
@@ -41,7 +41,7 @@ const StyledHeader = styled.div`
 
   .miniUser {
     display: flex;
-    width: 21vw;
+    width: 22vw;
     background-color: rgb(204, 220, 223);
     border: 1px solid #000;
     margin-top: 10px;
@@ -51,16 +51,22 @@ const StyledHeader = styled.div`
       width: 45%;
       margin-right: 20px;
       border-radius: 5px 0px 0px 5px;
+      @media (max-width: 700px) {
+        display: none;
+      }
     }
 
     h1 {
       font-size: 2em;
-      margin: 10px;
+      margin-bottom: 10px;
     }
 
     p {
       padding: 2px;
     }
+  }
+  a {
+    text-decoration: none;
   }
 
   @media (max-width: 700px) {
