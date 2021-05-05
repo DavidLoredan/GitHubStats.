@@ -1,114 +1,96 @@
 import styled from 'styled-components';
 
 const StyledContactUs = styled.div`
-  height: 80vh;
-  display: flex;
-  background-image: url(https://www.webratio.com/website/new-homepage/wr-site-contact-us-image-header.jpg);
-  justify-content: space-between;
+color: #f5f7f7;
 
-  .select {
-    margin-top: 0.5rem;
-    font-family: 'Courier New', Courier, monospace;
-  }
+.ContactUs {
+display: flex;
+background-color: rgb(204, 220, 223);
+color: #333333;
 
-  .textArea {
-    margin-bottom: 0.5rem;
-  }
 
-  .form {
-    margin-left: 5rem;
-    padding-top: 1rem;
-    font: inherit;
-  }
+.select {
+margin-top: 0.5rem;
+font-family: 'Courier New', Courier, monospace;
+color: #CCDCDF;
+}
 
-  #name,
-  #email,
-  #option,
-  #phone,
-  #message {
-    width: 100%;
-    height: 2rem;
-  }
+.textArea {
+margin-bottom: 0.5rem;
 
-  #message {
-    height: 10rem;
-  }
+}
 
-  .form-but {
-    margin-left: 10rem;
-    margin-top: 1rem;
-    margin-bottom: 5rem;
-    height: 2rem;
-    font-weight: 700;
-  }
+.form {
+padding-top: 1rem;
+margin-left: 5rem;
+font: inherit;
+width: 30vw;
+}
 
-  .form p {
-    color: white;
-  }
+#name, #email, #option, #phone, #message {
+width: 100%;
+height: 2rem;
+}
 
-  .form p button {
-    margin-top: 0.5rem;
-  }
+#message {
+height: 10rem;
+}
 
-  .form input {
-    margin-top: 0.5rem;
-  }
+.form-but {
+margin-left: 10rem;
+margin-top: 1rem;
+height: 2rem;
+font-weight: 700;
+}
 
-  .address {
-    margin-top: 25vh;
-    margin-right: 5rem;
-    color: white;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    font-size: 1.5rem;
-  }
+.form p {
+color: #f5f7f7;
+}
 
-  @media screen and (min-width: 800px) and (max-width: 1150px) {
-    .form {
-      margin-left: 3rem;
-    }
-    .address {
-      margin-right: 1rem;
-      font-size: 1.3rem;
-    }
-  }
-  .ContactUs {
-    @media screen and (min-width: 625px) and (max-width: 800px) {
-      .form {
-        margin-left: 0.5rem;
-      }
-      .form-but {
-        font-weight: 500;
-      }
-      .address {
-        margin-right: 0.1rem;
-        font-size: 1rem;
-      }
-    }
+.form p button {
+margin-top: 0.5rem;
+color: #f5f7f7;
+}
 
-    @media screen and (min-width: 300px) and (max-width: 625px) {
-      .form {
-        margin: auto;
-        width: 90%;
-      }
-      .form-but {
-        width: 50%;
-      }
-      .address {
-        display: none;
-      }
-    }
+.form input {
+margin-top: 0.5rem;
+}
 
-    .address a {
-      text-decoration: none;
-      color: white;
-      padding-top: 1rem;
-    }
+.address {
+margin-top: 13vh;
+margin-left: 20rem;
+color: #f5f7f7;
+padding-top: 1rem;
+padding-bottom: 1rem;
+font-size: 1.5rem;
+}
 
-    .address p {
-      padding-top: 1rem;
-    }
-  }
+@media screen and (max-width: 700px) {
+.form {
+  margin-left: 1rem;
+}
+.form-but {
+      width: 80%;
+      margin-left: 1rem;
+}
+
+.address {
+  margin-right: 1rem;
+  font-size: 1.3rem;
+  color: #333333;
+}
+}
+
+.address a {
+text-decoration: none;
+color: #333333;
+padding-top: 1rem;
+}
+
+.address p {
+padding-top: 1rem;
+color: #333333;
+}
 `;
 
 export default StyledContactUs;
