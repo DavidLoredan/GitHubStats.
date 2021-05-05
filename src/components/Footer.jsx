@@ -36,12 +36,16 @@ function Footer() {
       <div className="infos">
         <a
           href="https://www.wildcodeschool.com/fr-FR/condition-generales-utilisation"
+          target="_blank"
+          rel="noreferrer"
           className="link"
         >
           General Conditions of Use
         </a>
         <a
           href="https://www.wildcodeschool.com/fr-FR/charte-donnees-personnelles"
+          target="_blank"
+          rel="noreferrer"
           className="link"
         >
           Personal Data Charter
