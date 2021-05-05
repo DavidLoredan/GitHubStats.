@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 const StyledScreenShot = styled.div`
-  font-family: 'Times New Roman', Times, serif;
   font-size: 18px;
   background-size: cover;
   height: 100%;
@@ -23,12 +22,13 @@ const StyledScreenShot = styled.div`
     text-align: center;
     font-size: 2.6em;
     font-weight: bolder;
+    color: #f5f7f7;
     height: 12vh;
-    background-color: rgb(199, 199, 199);
+    background-color: #0e6476;
   }
   @media (max-width: 700px) {
     .titleAPI {
-      font-size: small;
+      font-size: 1.9em;
     }
   }
 `;
