@@ -58,11 +58,15 @@ margin-top: 0.5rem;
 
 .address {
 margin-top: 13vh;
-margin-left: 20rem;
+margin-left: 15rem;
 color: #f5f7f7;
 padding-top: 1rem;
 padding-bottom: 1rem;
 font-size: 1.5rem;
+}
+
+.map {
+  margin-top: 1rem;
 }
 
 @media screen and (max-width: 700px) {
@@ -75,7 +79,7 @@ font-size: 1.5rem;
 }
 
 .address {
-  margin-right: 1rem;
+  margin-left: 8rem;
   font-size: 1.3rem;
   color: #333333;
 }

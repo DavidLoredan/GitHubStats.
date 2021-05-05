@@ -49,7 +49,6 @@ function ContactUs() {
           <br />
           <a href="mailto: p2g3.github@gmail.com">p2g3.github@gmail.com</a>
           <p>Tél: 01 23 45 67 89</p>
-          <br />
           <iframe
             title="WCS"
             className="map"
