@@ -116,13 +116,14 @@ const StyledUserRepo = styled.div`
   }
 
   @media (max-width: 700px) {
-    .UserStarsRepo {
+    .cardeList {
       .carde {
         border: 2px;
-        border-radius: 10px;
+        border-radius: 5px;
         border: solid;
         width: 90vw;
         height: auto;
+        margin-bottom: 10px;
       }
     }
   }
