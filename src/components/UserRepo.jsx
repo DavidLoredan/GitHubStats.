@@ -27,7 +27,7 @@ function UserRepo() {
             .slice(0, 5)
             .map((repo) => {
               return (
-                <ul className="carde">
+                <ul className="carde" key={repo.id}>
                   <div className="repoInfo">
                     <a href={repo.html_url} target="_blank" rel="noreferrer">
                       <li className="repoName">{repo.name}</li>

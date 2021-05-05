@@ -7,17 +7,29 @@ function UserRepoDate() {
   const [repolist, setRepolist] = useState([]);
   const { login } = useParams();
 
+  function repoCreationDate(data) {
+    const saneData = [...data];
+    for (let i = 0; i < saneData.length; i += 1) {
+      const repo = saneData[i];
+      repo.created_at = repo.created_at.substring(0, 10);
+      saneData[i] = repo;
+    }
+
+    return saneData;
+  }
+
   useEffect(() => {
     axios
       .get(`https://api.github.com/users/${login}/repos`)
       .then(({ data }) => {
-        setRepolist(data);
+        const saneData = repoCreationDate(data);
+        setRepolist(saneData);
       });
   }, [login]);
 
   return (
     <StyledUserRepo>
-      <h2>The five most recently created repositories</h2>
+      <h2>The latest repositories</h2>
       <section className="UserStarsRepo">
         <div className="cardeList">
           {repolist
@@ -27,18 +39,12 @@ function UserRepoDate() {
             .slice(0, 4)
             .map((repo) => {
               return (
-                <ul className="carde">
+                <ul className="carde" key={repo.id}>
                   <div className="repoInfo">
                     <a href={repo.html_url} target="_blank" rel="noreferrer">
                       <li className="repoName">{repo.name}</li>
                     </a>
-                    <li className="repoDesc">
-                      {repo.created_at
-                        .substring(0, 10)
-                        .split('-')
-                        .reverse()
-                        .join('-')}
-                    </li>
+                    <li className="repoDesc">{repo.created_at}</li>
                   </div>
                   <div className="repoTechno">
                     <li className="languageRepo">{repo.language}</li>
