@@ -1,101 +1,101 @@
 import styled from 'styled-components';
 
 const StyledContactUs = styled.div`
-color: #f5f7f7;
+  display: flex;
 
-.ContactUs {
-display: flex;
-background-color: rgb(204, 220, 223);
-color: #333333;
-padding-bottom: 2rem;
+  background-color: rgb(204, 220, 223);
+  color: #333333;
+  padding-bottom: 2rem;
 
+  .select {
+    margin-top: 0.5rem;
+    font-family: 'Courier New', Courier, monospace;
+    color: #ccdcdf;
+  }
 
-.select {
-margin-top: 0.5rem;
-font-family: 'Courier New', Courier, monospace;
-color: #CCDCDF;
-}
+  .textArea {
+    margin-bottom: 0.5rem;
+  }
 
-.textArea {
-margin-bottom: 0.5rem;
+  .form {
+    padding-top: 1rem;
+    margin-left: 5rem;
+    font: inherit;
+    width: 30vw;
+  }
 
-}
+  #name,
+  #email,
+  #option,
+  #phone,
+  #message {
+    width: 100%;
+    height: 2rem;
+  }
 
-.form {
-padding-top: 1rem;
-margin-left: 5rem;
-font: inherit;
-width: 30vw;
-}
+  #message {
+    height: 10rem;
+  }
 
-#name, #email, #option, #phone, #message {
-width: 100%;
-height: 2rem;
-}
+  .form-but {
+    margin-left: 10rem;
+    margin-top: 1rem;
+    height: 2rem;
+    font-weight: 700;
+  }
 
-#message {
-height: 10rem;
-}
+  .form p {
+    color: #f5f7f7;
+  }
 
-.form-but {
-margin-left: 10rem;
-margin-top: 1rem;
-height: 2rem;
-font-weight: 700;
-}
+  .form p button {
+    margin-top: 0.5rem;
+    color: #f5f7f7;
+  }
 
-.form p {
-color: #f5f7f7;
-}
+  .form input {
+    margin-top: 0.5rem;
+  }
 
-.form p button {
-margin-top: 0.5rem;
-color: #f5f7f7;
-}
+  .address {
+    margin-top: 13vh;
+    margin-left: 15rem;
+    color: #f5f7f7;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 1.3rem;
+  }
 
-.form input {
-margin-top: 0.5rem;
-}
+  .map {
+    margin-top: 1rem;
+  }
 
-.address {
-margin-top: 13vh;
-margin-left: 15rem;
-color: #f5f7f7;
-padding-top: 1rem;
-padding-bottom: 1rem;
-font-size: 1.3rem;
-}
-
-.map {
-  margin-top: 1rem;
-}
-
-@media screen and (max-width: 700px) {
-.form {
-  margin-left: 1rem;
-}
-.form-but {
+  @media screen and (max-width: 700px) {
+    .form {
+      margin-left: 1rem;
+    }
+    .form-but {
       width: 80%;
       margin-left: 1rem;
-}
+    }
 
-.address {
-  margin-left: 8rem;
-  font-size: 1.3rem;
-  color: #333333;
-}
-}
+    .address {
+      margin-left: 8rem;
+      font-size: 1.3rem;
+      color: #333333;
+    }
+  }
 
-.address a {
-text-decoration: none;
-color: #333333;
-padding-top: 1rem;
-}
+  .address a {
+    text-decoration: none;
+    color: #333333;
+    padding-top: 1rem;
+  }
 
-.address p {
-padding-top: 1rem;
-color: #333333;
-}
+  .address p {
+    padding-top: 1rem;
+    color: #333333;
+  }
 `;
 
 export default StyledContactUs;
