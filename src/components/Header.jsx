@@ -1,21 +1,12 @@
 import { useState, useEffect } from 'react';
 import { useHistory, Link } from 'react-router-dom';
 import axios from 'axios';
-import styled from 'styled-components';
 import StyledHeader from './styledComponents/Sheader';
-import StyledUserInfo from './styledComponents/SuserInfo';
 import UserStats from './UserStats';
 
-const MiniUser = styled.div`
-  position: relative;
-  a {
-    text-decoration: none;
-    color: black;
-  }
-`;
 function Header() {
   const [query, setQuery] = useState('');
-  const [user, setUser] = useState([]);
+  const [user, setUser] = useState({});
   const history = useHistory();
   const handleQueryChange = () => {
     history.push(`/user/${query}`);
@@ -40,7 +31,9 @@ function Header() {
       </div>
       <section className="blocColor">
         <div className="title">
-          <h1>GitHub Stats</h1>
+          <Link to="/">
+            <h1>GitHub Stats</h1>
+          </Link>
         </div>
         <div className="sousTitre">
           <h2>Developper Space</h2>
@@ -57,9 +50,9 @@ function Header() {
           />
         </form>
         {user.login && (
-          <MiniUser>
+          <div className="userSuggested">
             <a href={`/user/${query}`} component={UserStats}>
-              <StyledUserInfo className="miniUser">
+              <div className="miniUser">
                 <img
                   className="userAvatar"
                   srcSet={user.avatar_url}
@@ -70,11 +63,11 @@ function Header() {
                   <p>{user.company} </p>
                   <p>Followers: {user.followers} </p>
                   <p>Following: {user.following} </p>
-                  <p>Created at: {user.created_at} </p>
+                  {user.hireable && <p>Hireable</p>}
                 </div>
-              </StyledUserInfo>
+              </div>
             </a>
-          </MiniUser>
+          </div>
         )}
       </div>
     </StyledHeader>

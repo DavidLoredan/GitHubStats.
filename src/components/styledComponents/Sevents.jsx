@@ -3,6 +3,7 @@ import styled from 'styled-components';
 const StyledEvent = styled.div`
   .Infos {
     display: flex;
+    justify-content: space-around;
 
     a {
       text-decoration: none;
@@ -10,46 +11,60 @@ const StyledEvent = styled.div`
     }
   }
 
-  img {
-    margin: 10px;
-    height: 50%;
-  }
-
   .InfoTitle {
     padding: 30px;
     text-align: center;
     font-size: 2.6em;
     font-weight: bolder;
+    color: #f5f7f7;
     height: 12vh;
-    background-color: rgb(199, 199, 199);
-  }
-  @media (max-width: 700px) {
-    .eventsTitle {
-      font-size: small;
-    }
+    background-color: #0e6476;
   }
 
   .SubjectInfo {
     position: relative;
     bottom: 40px;
-    height: 43vh;
     width: 35vw;
-    margin-left: 9vw;
+    height: 100%;
+    margin-top: 5px;
     border: 1px solid black;
-    background-color: rgb(199, 199, 199);
+    background-color: rgb(204, 220, 223);
     text-align: center;
   }
 
+  img {
+    margin: 8px;
+    width: 95%;
+    border-radius: 3px;
+  }
+
   .SubjectTitle {
-    font-size: 3vh;
+    font-size: 1.4em;
     font-weight: bold;
     margin: 5px;
   }
+
   p {
     margin: 10px;
   }
+
   .SubjectDate {
     margin: 10px;
   }
+
+  @media (max-width: 700px) {
+    .eventsTitle {
+      font-size: small;
+    }
+
+    .SubjectTitle {
+      font-size: 1em;
+    }
+
+    p {
+      font-size: 15px;
+    }
+  }
 `;
+
 export default StyledEvent;
