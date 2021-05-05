@@ -7,6 +7,7 @@ color: #f5f7f7;
 display: flex;
 background-color: rgb(204, 220, 223);
 color: #333333;
+padding-bottom: 2rem;
 
 
 .select {
