@@ -1,14 +1,16 @@
 import styled from 'styled-components';
 
 const StyledContactUs = styled.div`
-  height: 80vh;
   display: flex;
-  background-image: url(https://www.webratio.com/website/new-homepage/wr-site-contact-us-image-header.jpg);
-  justify-content: space-between;
+
+  background-color: rgb(204, 220, 223);
+  color: #333333;
+  padding-bottom: 2rem;
 
   .select {
     margin-top: 0.5rem;
     font-family: 'Courier New', Courier, monospace;
+    color: #ccdcdf;
   }
 
   .textArea {
@@ -16,9 +18,10 @@ const StyledContactUs = styled.div`
   }
 
   .form {
-    margin-left: 5rem;
     padding-top: 1rem;
+    margin-left: 5rem;
     font: inherit;
+    width: 30vw;
   }
 
   #name,
@@ -37,17 +40,17 @@ const StyledContactUs = styled.div`
   .form-but {
     margin-left: 10rem;
     margin-top: 1rem;
-    margin-bottom: 5rem;
     height: 2rem;
     font-weight: 700;
   }
 
   .form p {
-    color: white;
+    color: #f5f7f7;
   }
 
   .form p button {
     margin-top: 0.5rem;
+    color: #f5f7f7;
   }
 
   .form input {
@@ -55,59 +58,43 @@ const StyledContactUs = styled.div`
   }
 
   .address {
-    margin-top: 25vh;
-    margin-right: 5rem;
-    color: white;
+    margin-top: 13vh;
+    margin-left: 15rem;
+    color: #f5f7f7;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
-  @media screen and (min-width: 800px) and (max-width: 1150px) {
+  .map {
+    margin-top: 1rem;
+  }
+
+  @media screen and (max-width: 700px) {
     .form {
-      margin-left: 3rem;
+      margin-left: 1rem;
     }
+    .form-but {
+      width: 80%;
+      margin-left: 1rem;
+    }
+
     .address {
-      margin-right: 1rem;
+      margin-left: 8rem;
       font-size: 1.3rem;
+      color: #333333;
     }
   }
-  .ContactUs {
-    @media screen and (min-width: 625px) and (max-width: 800px) {
-      .form {
-        margin-left: 0.5rem;
-      }
-      .form-but {
-        font-weight: 500;
-      }
-      .address {
-        margin-right: 0.1rem;
-        font-size: 1rem;
-      }
-    }
 
-    @media screen and (min-width: 300px) and (max-width: 625px) {
-      .form {
-        margin: auto;
-        width: 90%;
-      }
-      .form-but {
-        width: 50%;
-      }
-      .address {
-        display: none;
-      }
-    }
+  .address a {
+    text-decoration: none;
+    color: #333333;
+    padding-top: 1rem;
+  }
 
-    .address a {
-      text-decoration: none;
-      color: white;
-      padding-top: 1rem;
-    }
-
-    .address p {
-      padding-top: 1rem;
-    }
+  .address p {
+    padding-top: 1rem;
+    color: #333333;
   }
 `;
 
