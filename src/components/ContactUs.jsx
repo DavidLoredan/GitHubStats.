@@ -48,7 +48,15 @@ function ContactUs() {
           <p>4 avenue des Saules, 59000 Lille</p>
           <br />
           <a href="mailto: p2g3.github@gmail.com">p2g3.github@gmail.com</a>
-          <p>Tél: 01 02 03 04 05</p>
+          <p>Tél: 01 02 03 04 05</p> <br />
+          <iframe
+            title="WCS"
+            className="map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2530.6955235221594!2d3.0155959150950737!3d50.63277278209288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c2d55ba8fa59e1%3A0xb2d48e50b58f28db!2s4%20Avenue%20des%20Saules%2C%2059160%20Lille!5e0!3m2!1sen!2sfr!4v1615409379910!5m2!1sen!2sfr"
+            width="auto"
+            height="auto"
+            loading="active"
+          />
         </div>
       </div>
     </div>

@@ -1,8 +1,10 @@
 .ContactUs {
-  height: 80vh;
+  height: 100vh;
+  width: 100vw;
   display: flex;
-  background-image: url(https://www.webratio.com/website/new-homepage/wr-site-contact-us-image-header.jpg);
   justify-content: space-between;
+  color: #f5f7f7;
+  background-color: rgb(204, 220, 223);
 }
 
 .select {
@@ -15,9 +17,10 @@
 }
 
 .form {
-  margin-left: 5rem;
   padding-top: 1rem;
+  margin-left: 5rem;
   font: inherit;
+  width: 30vw;
 }
 
 #name, #email, #option, #phone, #message {
@@ -32,17 +35,17 @@
 .form-but {
   margin-left: 10rem;
   margin-top: 1rem;
-  margin-bottom: 5rem;
   height: 2rem;
   font-weight: 700;
 }
 
 .form p {
-  color: white;
+  color: #f5f7f7;
 }
 
 .form p button {
   margin-top: 0.5rem;
+  color: #f5f7f7;
 }
 
 .form input {
@@ -50,53 +53,31 @@
 }
 
 .address {
-  margin-top: 25vh;
+  margin-top: 13vh;
   margin-right: 5rem;
-  color: white;
+  color: #f5f7f7;
   padding-top: 1rem;
   padding-bottom: 1rem;
   font-size: 1.5rem;
 }
 
-@media screen and (min-width: 800px) and (max-width: 1150px) {
+@media screen and (max-width: 700px) {
   .form {
-    margin-left: 3rem;
+    margin-left: 1rem;
   }
+  .form-but {
+        width: 80%;
+        margin-left: 1rem;
+      }
   .address {
     margin-right: 1rem;
     font-size: 1.3rem;
   }
 }
 
-@media screen and (min-width: 625px) and (max-width: 800px) {
-  .form {
-    margin-left: 0.5rem;
-  }.form-but {
-    font-weight: 500;
-
-  }
-  .address {
-    margin-right: 0.1rem;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width: 300px) and (max-width: 625px) {
-  .form {
-    margin: auto;
-    width: 90%;
-  }
-  .form-but {
-    width: 50%;
-  }
-  .address {
-    display: none
-  }
-}
-
 .address a {
   text-decoration: none;
-  color: white;
+  color: #f5f7f7;
   padding-top: 1rem;
 }
 
