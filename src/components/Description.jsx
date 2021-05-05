@@ -6,21 +6,8 @@ function Description() {
       <div className="Description">
         <h1>Description</h1>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-          Repudiandaeab numquam eius tempore temporibus corporis, laborum
-          similiquedignissimos mollitia soluta laboriosam necessitatibus, eum
-          doloresquasi tenetur quo officia a amet.Lorem ipsum, dolor sit amet
-          consectetur adipisicing elit. Repudiandae ab numquam eius tempore
-          temporibus corporis, laborum similique dignissimos mollitia soluta
-          laboriosam necessitatibus, eum dolores quasi tenetur quo officia a
-          amet.Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-          Repudiandae ab numquam eius tempore temporibus corporis, laborum
-          similique dignissimos mollitia soluta laboriosam necessitatibus, eum
-          dolores quasi tenetur quo officia a amet.Lorem ipsum, dolor sit amet
-          consectetur adipisicing elit. Repudiandae ab numquam eius tempore
-          temporibus corporis, laborum similique dignissimos mollitia soluta
-          laboriosam necessitatibus, eum dolores quasi tenetur quo officia a
-          amet.
+          Github Stats is an application that gives you all the information you
+          need about a github user on one click...
         </p>
       </div>
     </StyledDesription>

@@ -28,7 +28,7 @@ function Header() {
       <section className="blocColor">
         <div className="title">
           <Link to="/">
-            <h1>GitHub Stats</h1>
+            <h1>GitHub Stats.</h1>
           </Link>
         </div>
         <div className="sousTitre">

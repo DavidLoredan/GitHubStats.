@@ -1,5 +1,4 @@
 import React from 'react';
-import '../reset.css';
 import StyledUserStats from './styledComponents/SuserStats';
 import UserInfo from './UserInfo';
 import UserStarsRepo from './UserStarsRepo';
